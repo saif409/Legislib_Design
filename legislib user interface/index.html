@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Lexintell | Home</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color:#3d3a30;">
+  <a href="#"><img src="assets/img/image/logo.png" class="img-fluid img-thumbnail" alt="" style="height:40px;width:48;"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+        <a class="nav-link" href="#" style="color:#fff;"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="color:#fff;">CASE MANAGER</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color:#fff;">CASE SEARCH</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color:#fff;">LEGISLATION</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color:#fff;">BANGLADESH GAZETTE</a>
+      </li>
+    </ul>
+        <ul class="navbar-nav nav-flex-icons">
+                <li class="nav-item">
+                    <a class="nav-link" style="color:#fff;"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:#fff;" ><i class="fab fa-instagram"></i></a>
+                </li>
+            </ul>
+  </div>
+</nav>
+<div class="container-fluid" style="background-color:#3d3a30;height:120px;">
+    <div class="row" >
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8" style="margin-top:30px;">
+        <form class="form-inline my-2 my-lg-0 ">
+          <input class="form-control col-lg-10" type="search" placeholder="Search" aria-label="Search" style="height:50px;">
+          <button class="btn btn-default my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#exampleModal" style="background-color:#ed8932;height:50px;width:75px;"><i class="fa fa-search"></i></button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background-color:#7d8b99;">
+                                        <h5 class="modal-title" id="exampleModalLabel" style="color:#fff;">Please Inform Us, Who You
+                                            Are</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-question">First Name <span style="color:red;">*</span></label>
+                                                    <input class="form-control" name="question" type="text" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-question">Last Name <span style="color:red;">*</span></label>
+                                                    <input id="input-question" class="form-control" name="question"
+                                                           type="text" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label">User Name<span style="color:red;">*</span></label>
+                                                    <input class="form-control" name="username" type="text" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" >Phone<span style="color:red;">*</span></label>
+                                                    <input class="form-control" name="phone" type="text" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" >Email<span style="color:red;">*</span></label>
+                                                    <input class="form-control" name="email" type="text" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" >Adress<span style="color:red;">*</span></label>
+                                                    <input class="form-control" name="adress" type="text" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close
+                                            </button>
+                                            <button type="button" class="btn btn-primary btn-sm">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+        </div>
+        </form>
+       </div>
+        <div class="col-lg-2 ">
+            <div class="text" style="color:#fff; margin-top:20px;">
+                <p >Select Language</p>
+                <p><input name="language" value="english" id="english" type="radio">
+                    English <span style="border-right: 2px solid #707070;margin: 0 5px"></span>
+                    <input type="radio" name="language" value="bangla" id="বাংলা">
+                    বাংলা</p>
+            </div>
+         </div>
+    </div>
+</div>
+
+
+
+<section class="slice py-7" id="section_1111" style="margin-top:30px;">
+    <div class="container">
+        <div class="row row-grid align-items-center">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active border-primary">
+                        <div class="row">
+                            <div class="col-12 col-md-5 col-lg-6 order-md-2 text-center">
+                                <!-- Image -->
+                                <figure class="w-100">
+                                    <img alt="Image placeholder"
+                                         src="assets/slider-image/istockphoto-467505749-612x612.jpg"
+                                         class="img-fluid mw-md-120" style="height:450px;">
+                                </figure>
+                            </div>
+                            <div class="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5 mt-2">
+                                <!-- Heading -->
+                                <h1 class="display-4 text-center text-md-left mb-3" id="expand">Expand your legal
+                                    knowledge
+                                </h1>
+                                <!-- Text -->
+                                <p class="lead text-center text-md-left text-muted pl-1" id="legislib">
+                                    Legal library one of the largest collections of legal information in the world with a
+                                    platform powered by artificial intelligence that understands the law and gets
+                                    smarter with every click
+                                </p>
+                                <!-- Buttons -->
+                                <div class="text-center text-md-left mt-5">
+                                    <a href="https://webpixels.io/themes/quick-free-bootstrap-theme"
+                                       class="btn btn-primary btn-icon" target="_blank">
+                                        <span class="btn-inner--text" id="free_sign_up">Free Sign UP</span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-12 col-md-5 col-lg-6 order-md-2 text-center">
+                                <!-- Image -->
+                                <figure class="w-100">
+                                    <img alt="Image placeholder"
+                                         src="assets/slider-image/istockphoto-1090431444-612x612.jpg"
+                                         class="img-fluid mw-md-120" style="height:450px;">
+                                </figure>
+                            </div>
+                            <div class="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5 mt-2">
+                                <!-- Heading -->
+                                <h1 class="display-4 text-center text-md-left mb-3 pl-1" id="make_decisions">
+                                    Make decisions in the public interest backed by Legal library
+                                </h1>
+                                <!-- Text -->
+                                <p class="lead text-center text-md-left text-muted pl-1" id="make_decisions_text">
+                                    500,000+ government employees have peace of mind in applying the law with Legal library
+                                </p>
+                                <!-- Buttons -->
+                                <div class="text-center text-md-left mt-5">
+
+                                    <a href="" class="btn btn-primary btn-icon d-none d-lg-inline-block" target="_blank"
+                                       id="request_info">Request Info</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-12 col-md-5 col-lg-6 order-md-2 text-center">
+                                <!-- Image -->
+                                <figure class="w-100">
+                                    <img alt="Image placeholder"
+                                         src="assets/slider-image/martin-adams-_OZCl4XcpRw-unsplash.jpg"
+                                         class="img-fluid mw-md-120" style="height:450px;width:500px;">
+                                </figure>
+                            </div>
+                            <div class="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5 mt-2">
+                                <!-- Heading -->
+                                <h1 class="display-4 text-center text-md-left mb-3 pl-1" id="stay_ahed">
+                                    Stay ahead of the game
+                                </h1>
+                                <!-- Text -->
+                                <p class="lead text-center text-md-left text-muted pl-1" id="lawyers">
+                                    100,000+ lawyers and corporate counsel gain their competitive edge with Legal library
+                                </p>
+                                <!-- Buttons -->
+                                <div class="text-center text-md-left mt-5">
+
+                                    <a href="" class="btn btn-primary btn-icon d-none d-lg-inline-block" target="_blank"
+                                       id="request">Request Info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-12 col-md-5 col-lg-6 order-md-2 text-center">
+                                <!-- Image -->
+                                <figure class="w-100">
+                                    <img alt="Image placeholder" src="assets/slider-image/law-419057_960_720.jpg"
+                                         class="img-fluid mw-md-120" style="height:450px;">
+                                </figure>
+                            </div>
+                            <div class="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5 mt-2">
+                                <!-- Heading -->
+                                <h1 class="display-4 text-center text-md-left mb-3 pl-1" id="research_further">
+                                    Take your research further
+                                </h1>
+                                <!-- Text -->
+                                <p id="Legal library_learning " style="padding-left:10px;">Students around the world are
+                                    learning with Legal library for its
+                                    comprehensive local coverage in both common and civil law countries, as well as
+                                    choosing it as the #1 tool for comparative legal research</strong></p>
+                                <!-- Buttons -->
+                                <div class="text-center text-md-left mt-5">
+
+                                    <a href="" class="btn btn-primary btn-icon d-none d-lg-inline-block" target="_blank"
+                                       id="info_request">Request Info</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--<marquee class="bg-info text-white">Welcome To Legel library</marquee>-->
+<nav class="navbar navbar-expand-lg">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse bg-primary justify-content-center" id="navbarSupportedContent"  style="background-color:#ed8932;">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="#search&filter" style="color:#fff;">Content Coverage</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="#section_2" style="color:#fff;">Feature</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="#section_3" style="color:#fff;">Service we Provide</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="#section_4" style="color:#fff;">Summary</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="#section_5" style="color:#fff;">Case Manageger</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="#section_6" style="color:#fff;">Subscription Cost</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+<section class="slice slice-lg pt-lg-6 pb-0 pb-lg-6 bg-section-secondary" id="search&filter">
+    <div class="container">
+        <!-- Title -->
+        <!-- Section title -->
+        <div class="row mb-5 justify-content-center text-center">
+            <div class="col-lg-6">
+                        <span class="badge badge-soft-success badge-pill badge-lg">
+                            Get started
+                        </span>
+                <h2 class=" mt-4" id="advanced_website">Most advanced legal research website of Bangladesh</h2>
+                <div class="mt-2">
+                    <p class="lead lh-180" id="cases_acts_laws">Cases, Acts, Laws, Bangladesh gazettes.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card -->
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body pb-5">
+                        <div class="pt-4 pb-5">
+                            <img src="assets/img/image/useable_pic/WhatsApp Image 2020-10-06 at 10.26.52 PM.jpeg"
+                                 class="img-fluid img-center"
+                                 style="height: 150px;" alt="Illustration"/>
+                        </div>
+                        <p class="h6 lh-130 mb-3" id="search_filter">Supreme Court of Bangladesh Cases</p>
+                        <p>
+                            <a class="btn btn-primary btn-sm" data-toggle="collapse" href="#multiCollapseExample"
+                               role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Click Here</a>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="multiCollapseExample">
+                                    <div class="card card-body" style="margin-top:20px;">
+                                        <ul>
+
+                                            <li>- Appellate Division</li>
+                                            <li>- High Court Division</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body pb-5">
+                        <div class="pt-4 pb-5">
+                            <img src="assets/img/image/useable_pic/WhatsApp Image 2020-10-06 at 10.26.49 PM (1).jpeg"
+                                 class="img-fluid img-center"
+                                 style="height: 150px;" alt="Illustration"/>
+                        </div>
+                        <p class="h6 lh-130 mb-3" id="data_connectivity">Bangladeshi Statutory Law</p>
+                        <p>
+                            <a class="btn btn-primary btn-sm" data-toggle="collapse" href="#multiCollapseExample1"
+                               role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Click Here</a>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                    <div class="card card-body" style="margin-top:20px;">
+                                        <ul>
+                                            <li>- Rules, Regulations,</li>
+                                            <li>- Circulars, Notifications, Instructions,</li>
+                                            <li>- Bills in Parliament,</li>
+                                            <li>- Constitution</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body pb-5">
+                        <div class="pt-4 pb-5">
+                            <img src="assets/img/image/useable_pic/WhatsApp Image 2020-10-06 at 10.26.50 PM.jpeg"
+                                 class="img-fluid img-center"
+                                 style="height: 150px;" alt="Illustration"/>
+                        </div>
+                        <p class="h6 lh-130 mb-3" id="research_trail">Bangladeshi Secondary Materials</p>
+                        <!---->
+                        <p>
+                            <a class="btn btn-primary btn-sm" data-toggle="collapse" href="#multiCollapseExample2"
+                               role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Click Here</a>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                    <div class="card card-body" style="margin-top:20px;">
+                                        <ul>
+                                            <li>- Parliamentary Debates</li>
+                                            <li>- Reports of Commissions and Committees,</li>
+                                            <li>- Legal Articles - from top professional and scholarly Journals</li>
+                                            <li>- Bilateral and Multilateral Treaties</li>
+                                            <li>- Historical Trials</li>
+                                            <li>- Policy Documents</li>
+                                            <li>- Public Documents like MoA, AoA</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body pb-5">
+                        <div class="pt-4 pb-5">
+                            <img src="assets/img/image/useable_pic/indian-supr.jpg" class="img-fluid img-center"
+                                 style="height: 150px;" alt="Illustration"/>
+                        </div>
+                        <p class="h6 lh-130 mb-3" id="bangladesh_gazettes">Indian Case Law</p>
+                        <p>
+                            <a class="btn btn-primary btn-sm" data-toggle="collapse" href="#multiCollapseExample4"
+                               role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Click Here</a>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="multiCollapseExample4">
+                                    <div class="card card-body" style="margin-top:20px;">
+                                        <ul>
+                                            <li>- Supreme Court</li>
+                                            <li>- Federal Court</li>
+                                            <li>- Privy Council</li>
+                                            <li>- All High Courts</li>
+                                            <li>- Historical Courts</li>
+                                            <li>- Ajmer Judicial Commissioner’s Court</li>
+                                            <li>- Goa Judicial Commissioner’s Court</li>
+                                            <li>- Kutch Judicial Commissioner’s Court</li>
+                                            <li>- Lower Burma Chief Court</li>
+                                            <li>- Oudh Chief Court</li>
+                                            <li>- Oudh Judicial Commissioner’s Court</li>
+                                            <li>- Pepsu High Court</li>
+                                            <li>- Peshawar Judicial Commissioner’s Court</li>
+                                            <li>- Sind Chief Court</li>
+                                            <li>- Sind Judicial Commissioner’s Court</li>
+                                            <li>- Upper Burma Judicial Commissioner’s Court</li>
+                                            <li>- Vindhya Pradesh Judicial Commissioner’s Court</li>
+                                            <li>- Lahore High Court</li>
+                                            <li>- Rangoon High Court</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body pb-5">
+                        <div class="pt-4 pb-5">
+                            <img src="assets/img/image/useable_pic/img.jpeg" class="img-fluid img-center"
+                                 style="height: 150px;" alt="Illustration"/>
+                        </div>
+                        <p class="h6 lh-130 mb-3" id="create_annotation">Pakistani Case Law</p>
+                        <p>
+                            <a class="btn btn-primary btn-sm" data-toggle="collapse" href="#multiCollapseExample5"
+                               role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Click Here</a>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="multiCollapseExample5">
+                                    <div class="card card-body" style="margin-top:20px;">
+                                        <ul>
+                                            <li>- Supreme Court</li>
+                                            <li>- High Courts</li>
+                                            <li>- Federal Court</li>
+                                            <li>- Federal Shariat Court</li>
+                                            <li>- Board of Revenue of East Pakistan</li>
+                                            <li>- Board of Revenue of West Pakistan</li>
+                                            <li>- Evacuee Property Tribunal</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body pb-5">
+                        <div class="pt-4 pb-5">
+                            <img src="assets/img/image/useable_pic/180px-Seal_of_the_United_States_Supreme_Court.svg.png"
+                                 class="img-fluid img-center"
+                                 style="height: 150px;" alt="Illustration"/>
+                        </div>
+                        <p class="h6 lh-130 mb-3" id="research_shares">United Kingdom Case Law</p>
+                        <p>
+                            <a class="btn btn-primary btn-sm" data-toggle="collapse" href="#multiCollapseExample6"
+                               role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Click Here</a>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="multiCollapseExample6">
+                                    <div class="card card-body" style="margin-top:20px;">
+                                        <ul>
+                                            <li>- Supreme Court</li>
+                                            <li>- House of Lords</li>
+                                            <li>- England &amp; Wales</li>
+                                            <li>- Court of Appeal</li>
+                                            <li>- England &amp; Wales High Courts</li>
+                                            <li>- Tribunals Privy Council</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body pb-5">
+                        <div class="pt-4 pb-5">
+                            <img src="assets/img/image/useable_pic/1200px-International_Court_of_Justice_Seal.svg.png"
+                                 class="img-fluid img-center"
+                                 style="height: 150px;" alt="Illustration"/>
+                        </div>
+                        <p class="h6 lh-130 mb-3" id="research_share">International Materials</p>
+                        <p>
+                            <a class="btn btn-primary btn-sm" data-toggle="collapse" href="#multiCollapseExample7"
+                               role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Click Here</a>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="multiCollapseExample7">
+
+                                    <ul>
+                                        <li>- African Commission on Human and Peoples’ Rights (ACHPR)</li>
+                                        <li>- African Court on Human and Peoples’ Rights (ACTHPR)</li>
+                                        <li>- Board of Appeal of the European Patent Office (BAEPO)</li>
+                                        <li>- Caribbean Court of Justice (CCJ)</li>
+                                        <li>- Central American Court of Justice (CACJ)</li>
+                                        <li>- COMESA Court of Justice (COMESACJ)</li>
+                                        <li>- Committee Against Torture (COMAT)</li>
+                                        <li>- Committee on the Elimination of Discrimination against Women (CEDAW)</li>
+                                        <li>- Committee on Elimination of Racial Discrimination (CERD)</li>
+                                        <li>- Court of Appeal for East Africa (CAEA</li>
+                                        <li>- Court of Appeal for West Africa (WACA)</li>
+                                        <li>- East African Court of Justice (EACJ)</li>
+                                        <li>- Eastern Caribbean Supreme Court (ECSC)</li>
+                                        <li>- ECOWAS Community Court of Justice (ECOWAS CCJ)</li>
+                                        <li>- Extraordinary Chambers in the Courts of Cambodia (ECCC)</li>
+                                        <li>- Human Rights Ad Hoc Court at Central Jakarta State Court (HRAHC)</li>
+                                        <li>- Human Rights Chamber for Bosnia and Herzegovina (HRCBH)</li>
+                                        <li>- Human Rights Committee (HRC)</li>
+                                        <li>- Inter-American Commission on Human Rights (IACHR)</li>
+                                        <li>- Inter-American Court of Human Rights (IACTHR)</li>
+                                        <li>- International Commission of Inquiry (ICI)</li>
+                                        <li>- International Criminal Court (ICC)</li>
+                                        <li>- European Court of Justice (ECJ)</li>
+                                        <li>- International Criminal Tribunal for Rwanda (ICTR)</li>
+                                        <li>- International Military Tribunal (IMT)</li>
+                                        <li>- International Tribunal for the Law of the Sea (ITLOS)</li>
+                                        <li>- Permanent Court of Arbitration (PCA)</li>
+                                        <li>- Permanent Court of International Justice (PCIJ)</li>
+                                        <li>- Southern African Development Community Tribunal (SADCT)</li>
+                                        <li>- Special Court for Sierra Leone (SCSL)</li>
+                                        <li>- Special Tribunal for Lebanon (STL)</li>
+                                        <li> UN-ETTA Special Panel for Serious Crimes &amp; Court of Appeal (SPSC)</li>
+                                        <li>War Crimes Section of the Court of Bosnia and Herzegovina (WCSBH)</li>
+                                        <li>- WIPO (Domain Name Decisions)</li>
+                                        <li>- WTO Dispute Settlement</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="slice slice-lg" id="section_2">
+    <div class="container">
+        <div class="py-6">
+            <div class="row row-grid justify-content-between align-items-center">
+                <div class="col-lg-5">
+                    <h5 class="h3" id="search_and_filter_visualization">Search & Filter Visualization</h5>
+                    <p class="lead my-4" id="search_and_filter_visualization_text">
+                        Most advanced and intelligent search engine, Narrow down as per your requirements, Find what you
+                        need
+                    </p>
+                    <ul class="list-unstyled mb-0">
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-file-invoice"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                        <span class="h6 mb-0" id="perfect_startup">Basic search allows you to search anything, i.e Keywords, Legislations, Judgments Title, Citations, Case Number etc.
+    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-file-invoice"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="h6 mb-0" id="perfect_startup">Automate the task of finding by Suggestions</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-file-invoice"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                        <span class="h6 mb-0" id="perfect_startup">-	Basic Search Performs a conceptual search for information as a human would, but is able to go further and faster by performing thousands of combined operations per second.
+    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-file-invoice"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                        <span class="h6 mb-0" id="perfect_startup">Legal library reduces your risk because it validates its work by looking for new cases and updated legislation in the Legal library collection.
+    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-file-invoice"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="h6 mb-0" id="perfect_startup">Basic Search does more than find documents, it delivers the insight you need to make your case</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-file-invoice"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="h6 mb-0" id="perfect_startup">Basic Search is also a powerful ally, whether you are looking to challenge your opponent’s argument or looking to validate and improve your own work,</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-file-invoice"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                        <span class="h6 mb-0" id="perfect_startup">basic search can analyze documents in English and Bangla, and is trained in the law of more than 5 countries.
+    </span>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card mb-0 ml-lg-5">
+                        <div class="card-body p-2">
+                            <img alt="Image placeholder" src="assets/gif-alt-image/bookcase-335849_960_720.jpg"
+                                 class="img-fluid shadow rounded"
+                                 style="height:560px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-6">
+            <div class="row row-grid justify-content-between align-items-center">
+                <div class="col-lg-5 order-lg-2">
+                    <h5 class="h3" id="judgement_report">Narrowing Search by Filters</h5>
+                    <p class="lead my-4" id="judgement_report_text">
+                        After running your search, you can narrow your results using filters in the Filters section on
+                        the results list. You can narrow using some or all available filter choices in a Category.
+                        Filters can be used to narrow down your search to
+                    </p>
+                    <ul class="list-unstyled mb-0">
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-file-invoice"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="h6 mb-0" id="modern_startup">the specific dates</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-store-alt"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="h6 mb-0" id="ready_to_customized">legislations</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-store-alt"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="h6 mb-0" id="ready_to_customized">Subject Areas</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-store-alt"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="h6 mb-0" id="ready_to_customized">Courts</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-store-alt"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="h6 mb-0" id="ready_to_customized">Jurisdictions and countries</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-store-alt"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="h6 mb-0" id="ready_to_customized">Content types</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-store-alt"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="h6 mb-0" id="ready_to_customized">Find filters next to your search results in Legal library</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="card mb-0 mr-lg-5">
+                        <div class="card-body p-2">
+                            <img alt="Image placeholder" src="assets/gif-alt-image/justice-2060093_960_720.jpg"
+                                 class="img-fluid shadow rounded"
+                                 style="height:500px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="py-6">
+            <div class="row row-grid justify-content-between align-items-center">
+                <div class="col-lg-5">
+                    <h5 class="h3" id="most_handy">Cited in and Cited By</h5>
+                    <p class="lead my-4" id="judgement_report_text">
+                        Legal library includes a list of references under each source. Next to each document there is a
+                        "cited by" and a “cited in” link. Clicking on this link shows Legal library's citation analysis.
+                    </p>
+                    <ul class="list-unstyled mb-0">
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-file-invoice"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="h6 mb-0" id="resourceful_database">Cited In lists which cases and laws are cited in a document</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-2">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <div class="icon icon-shape bg-primary text-white icon-sm rounded-circle mr-3">
+                                        <i class="fas fa-store-alt"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="h6 mb-0" id="digital_library">Cited By  lists which cases or laws have cited a specific document</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card mb-0 ml-lg-5">
+                        <div class="card-body p-2">
+                            <img alt="Image placeholder" src="assets/gif-alt-image/books-5658928_960_720.png"
+                                 class="img-fluid shadow rounded"
+                                 style="height:460px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="slice slice-lg bg-section-primary pt-5 pt-lg-8" id="section_3">
+
+    <!-- Container -->
+    <div class="container position-relative zindex-100" style="margin-bottom:20px;">
+        <div class="col">
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-center">
+                    <div class="mt-4 mb-6">
+                        <h2 class="h1 text-dark" id="grow_faster">
+                            Are you ready to grow faster?
+                        </h2>
+                        <h4 class="text-dark mt-3" id="experince">Create your own experience</h4>
+                        <!-- Play button -->
+                        <a href="#" class="btn btn-primary btn-icon mt-4" id="learn">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="slice pt-0" id="section_4">
+    <div class="container position-relative zindex-100">
+        <div class="row">
+            <div class="col-xl-4 col-sm-6 mt-n7">
+                <div class="card">
+                    <div class=" p-5">
+                        <div>
+                            <span class="badge badge-warning badge-pill" id="request_feature">subscriptions</span>
+                        </div>
+                        <br>
+                        <div class="pl-1">
+                            <h5 class="lh-130" id="research_request">Pay as you go, Monthly or annual online Law Library
+                                subscriptions</h5><br>
+                            <p class="text-muted mb-0" style="text-align:justify;" id="research_request_text">
+                                Legal library Provides subscription according to the need of different personals including
+                                law firms, different institutions
+                                and individuals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-sm-6 mt-sm-n7">
+                <div class="card">
+                    <div class="p-5">
+                        <div>
+                            <span class="badge badge-success badge-pill" id="connectors">Legal Reasearch</span>
+                        </div>
+                        <br>
+                        <div class="pl-4">
+                            <h5 class="lh-130" id="search_connectors">Legal Research Services</h5><br>
+                            <p class="text-muted mb-0" style="text-align:justify;" id="search_connectors_text">
+                                Legal library provides you with up to date case law and legislation, which
+                                is imperative in giving accurate advice to clients. You may ask one of our team members
+                                judgments .and laws on a specific topic.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-12 col-sm-6 mt-xl-n7">
+                <div class="card">
+                    <div class=" p-5">
+                        <div>
+
+                            <span class="badge badge-danger badge-pill" id="high_tech">Drafting</span>
+                        </div>
+                        <br>
+                        <div class="pl-3">
+                            <h5 class="lh-130" id="elastic_search">Drafting Services:</h5><br>
+                            <p class="text-muted mb-0" style="text-align:justify;" id="elastic_search_text">
+                                Legal library provides drafting services by experienced Barristers and Advocates
+                                of the Supreme Court of Bangladesh.A practical guide to drafting statements
+                                of case. This note addresses of claim and
+                                defence.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-4 col-sm-6">
+                <div class="card">
+                    <div class="p-5">
+                        <div>
+                            <span class="badge badge-warning badge-pill"
+                                  id="high_tech_another">Data Digitalization</span>
+                        </div>
+                        <br>
+                        <div class="pl-4">
+                            <h5 class="lh-130" id="filte">Data Digitalization Services:</h5><br>
+                            <p class="text-muted mb-0" style="text-align:justify;" id="filte_text">
+                                Legal library provides translation, typing, data entry and documents scanning services.
+                                Digitalization confronts organizations with huge challenges and opportunities.
+                                With all economic and societal sectors being affected by emerging technologies
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-sm-6">
+                <div class="card">
+                    <div class=" p-5">
+                        <div>
+                            <span class="badge badge-success badge-pill" id="smart_data">Case Manager</span>
+                        </div>
+                        <br>
+                        <div class="pl-4">
+                            <h5 class="lh-130" id="cited_by">Case Manager (Suit management and cause list search
+                                services):</h5><br>
+                            <p class="text-muted mb-0" style="text-align:justify;" id="cited_by_text">
+                                Case Manager is a Saas based, Suit management software for lawyers,corporate
+                                institutions which helps to keep track of suits.
+                                The system includes cause list of judiciary, case diary, billing and
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-12 col-sm-6">
+                <div class="card">
+                    <div class=" p-5">
+                        <div>
+                            <span class="badge badge-danger badge-pill" id="smart_data_another">support</span>
+                        </div>
+                        <br>
+                        <div class="pl-3">
+                            <h5 class="lh-130" id="report_coverage">Web development &amp; IT support:</h5><br>
+                            <p class="text-muted mb-0" style="text-align:justify;" id="report_coverage_text">
+                                Legal library Provides web development and IT support for law
+                                chambers and individuals.We provide IT
+                                services in optimizing technology
+                                and managing IT solutions. Dataprise helps you retain
+                                focus on the pressing legal matters you face every day.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="slice slice-lg" id="section_5">
+    <div class="container">
+        <!-- Features -->
+        <div class="row mx-lg-n4">
+            <div class="col-lg-4 col-md-6 px-lg-4">
+                <div class="card">
+                    <div class="p-3 d-flex">
+                        <div>
+                            <div class="icon icon-shape rounded-circle bg-warning text-white mr-4">
+                                <i data-feather="check"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="h6" id="remove">All reported judgments of the supreme court of Bangladesh</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 px-lg-4">
+                <div class="card">
+                    <div class="p-3 d-flex">
+                        <div>
+                            <div class="icon icon-shape rounded-circle bg-primary text-white mr-4">
+                                <i data-feather="check"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="h6" id="data_extraction">Citations from all major law Reports</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 px-lg-4">
+                <div class="card">
+                    <div class="p-3 d-flex">
+                        <div>
+                            <div class="icon icon-shape rounded-circle bg-danger text-white mr-4">
+                                <i data-feather="check"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="h6" id="data_summary">Summary of cases by Extraction of Important</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 px-lg-4">
+                <div class="card">
+                    <div class="p-3 d-flex">
+                        <div>
+                            <div class="icon icon-shape rounded-circle bg-success text-white mr-4">
+                                <i data-feather="check"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="h6" id="smart_filter">Bangladesh Code</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 px-lg-4">
+                <div class="card">
+                    <div class="p-3 d-flex">
+                        <div>
+                            <div class="icon icon-shape rounded-circle bg-info text-white mr-4">
+                                <i data-feather="check"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="h6" id="inteligent_search">Bangladesh Gazette updated daily</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 px-lg-4">
+                <div class="card">
+                    <div class="p-3 d-flex">
+                        <div>
+                            <div class="icon icon-shape rounded-circle bg-warning text-white mr-4">
+                                <i data-feather="check"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="h6" id="developed">Search Cases by Acts, Rules, Regulations and Orders</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 px-lg-4">
+                <div class="card">
+                    <div class="p-3 d-flex">
+                        <div>
+                            <div>
+                                <div class="icon icon-shape rounded-circle bg-info text-white mr-4">
+                                    <i data-feather="check"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="h6" id="guided_user">Judgments from 20 different countries including India, Pakistan and UK.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 px-lg-4">
+                <div class="card">
+                    <div class="p-3 d-flex">
+                        <div>
+                            <div>
+                                <div class="icon icon-shape rounded-circle bg-info text-white mr-4">
+                                    <i data-feather="check"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="h6" id="guided_users">Judgments and Treaties from different international courts.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="slice slice-lg bg-section-secondary" id="section_6" style="margin-top:40px;">
+    <div class="container text-center">
+        <div class="row justify-content-center mb-6" style="background-color:#12235c;">
+            <div class="col-lg-8">
+                <!-- Title -->
+                <h2 class="h1 strong-600 text-white" id="right_plan">
+                    Choose the right plan. No setup and hidden fees
+                </h2>
+                <!-- Text -->
+                <p class="text-white" id="right_plan_text">
+                    Hundreds of law professionals around the world are using this powerful tool
+                </p>
+            </div>
+            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist" style="text-align:center;background-color:#12235c;">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                   aria-selected="true">Individuals and law firms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                   aria-controls="profile"
+                   aria-selected="false">Universities and Corporate Bodies</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                   aria-controls="contact"
+                   aria-selected="false">For Registered Students</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="RegisteredApprenticeLawyerstab" data-toggle="tab"
+                   href="#RegisteredApprenticeLawyers" role="tab"
+                   aria-controls="contact"
+                   aria-selected="false">For Registered Apprentice Lawyers</a>
+            </li>
+        </ul>
+
+        </div>
+        <!-- Pricing -->
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row justify-content-center" style="margin-top:30px;">
+                    <div class="col-lg-4 col-md">
+                        <div class="card card-pricing text-center px-3 hover-scale-110" style="background-color:#152763;">
+                            <div class="card-header py-5 border-0 delimiter-bottom">
+                                <div class="h1 text-center mb-0"><span class="price font-weight-bolder text-white" id="money_year">25000 BDT</span>
+                                </div>
+                                <span class="h6 text-white" id="per_year">Per Year</span>
+                            </div>
+                            <div class="card-body">
+                                <p id="per_year_text" class="text-white">single account, full database, no restriction in
+                                    data
+                                    downloading</p>
+                                <a style="margin-top:20px;" href="#"
+                                   class="btn btn-sm btn-default hover-translate-y-n3 hover-shadow-lg mb-3"
+                                   id="purchase_now_one">Purchase now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md">
+                        <div class="card card-pricing bg-default text-center px-3 border-0 hover-scale-110">
+                            <div class="card-header py-5 border-0 delimiter-bottom">
+                                <div class="h1 text-dark text-center mb-0"><span class="price font-weight-bolder"
+                                                                                  id="money_month">2500 BDT</span>
+                                </div>
+                                <span class="h6 text-dark" id="per_month">Per Month</span>
+                            </div>
+                            <div class="card-body" id="per_month_text">
+                                <p>single account, full database, no restriction in data downloading</p>
+                                <a style="margin-top:20px;" href="#"
+                                   class="btn btn-sm btn-danger hover-translate-y-n3 hover-shadow-lg mb-3"
+                                   id="purchase_now_two">Purchase
+                                    now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md">
+                        <div class="card card-pricing text-center px-3 border-0 hover-scale-110" style="background-color:#152763;">
+                            <div class="card-header py-5 border-0 delimiter-bottom">
+                                <div class="h1 text-white text-center mb-0"><span class="price font-weight-bolder"
+                                                                                 id="money_hour">500 BDT</span>
+                                </div>
+                                <span class="h6 text-white" id="per_hour">24 Hour</span>
+                            </div>
+                            <div class="card-body">
+                                <p id="per_hour_text" class="text-white"> full database,downloading to restrictions, rules</p>
+                                <a style="margin-top:20px;" href="#"
+                                   class="btn btn-sm btn-default hover-translate-y-n3 hover-shadow-lg mb-3"
+                                   id="purchase_now_four">Purchase now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="row justify-content-center" style="margin-top:30px;">
+                    <div class="col-lg-4 col-md">
+                        <div class="card card-pricing text-center px-3 border-0 hover-scale-110" style="background-color:#152763;">
+                            <div class="card-header py-5 border-0 delimiter-bottom">
+                                <div class="h1 text-white text-center mb-0"><span class="price font-weight-bolder"
+                                                                                  id="money_month">55000 BDT</span>
+                                </div>
+                                <span class="h6 text-white" id="per_month">Per Year </span>
+                            </div>
+                            <div class="card-body" id="per_month_text">
+                                <p style="text-align: justify" class="text-white">full database: Ten IDs will be
+                                    provided which can be used simultaneously 24/7
+                                    and as many as data can be downloaded; A University or a Corporate Body may
+                                    also have more than ten IDs. Please ask one of our team members for further
+                                    information.</p>
+                                <a style="margin-top:20px;" href="#"
+                                   class="btn btn-sm btn-default hover-translate-y-n3 hover-shadow-lg mb-3"
+                                   id="purchase_now_two">Purchase now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="row justify-content-center" style="margin-top:30px;">
+                    <div class="col-lg-4 col-md">
+                        <div class="card card-pricing text-center px-3 hover-scale-110" style="background-color:#152763;">
+                            <div class="card-header py-5 border-0 delimiter-bottom">
+                                <div class="h1 text-center text-white mb-0"><span class="price font-weight-bolder" id="money_year">550 BDT </span>
+                                </div>
+                                <span class="h6 text-white" id="per_year">Per Year</span>
+                            </div>
+                            <div class="card-body">
+                                <p id="per_year_text" class="text-white">single account, limited database, data
+                                    downloading subject to restrictions</p>
+                                <a style="margin-top:20px;" href="#"
+                                   class="btn btn-sm btn-default hover-translate-y-n3 hover-shadow-lg mb-3"
+                                   id="purchase_now_one">Purchase now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md">
+                        <div class="card card-pricing text-center px-3 border-0 hover-scale-110">
+                            <div class="card-header py-5 border-0 delimiter-bottom">
+                                <div class="h1 text-dark text-center mb-0"><span class="price font-weight-bolder"
+                                                                                  id="money_month">110 BDT </span>
+                                </div>
+                                <span class="h6 text-dark" id="per_month">Per Month</span>
+                            </div>
+                            <div class="card-body" id="per_month_text">
+                                <p class="text-dark">single account, limited database, data downloading subject to
+                                    restrictions</p>
+                                <a style="margin-top:20px;" href="#"
+                                   class="btn btn-sm btn-danger hover-translate-y-n3 hover-shadow-lg mb-3"
+                                   id="purchase_now_two">Purchase now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="RegisteredApprenticeLawyers" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="row justify-content-center" style="margin-top:30px;">
+                    <div class="col-lg-4 col-md">
+                        <div class="card card-pricing text-center px-3 hover-scale-110" style="background-color:#152763;">
+                            <div class="card-header py-5 border-0 delimiter-bottom">
+                                <div class="h1 text-center text-white mb-0"><span class="price font-weight-bolder" id="money_year">1500 BDT</span>
+                                </div>
+                                <span class="h6 text-white" id="per_year">Per Year</span>
+                            </div>
+                            <div class="card-body">
+                                <p id="per_year_text" class="text-white">single account, limited database, data
+                                    downloading subject to
+                                    restrictions</p>
+                                <a style="margin-top:20px;" href="#"
+                                   class="btn btn-sm btn-default hover-translate-y-n3 hover-shadow-lg mb-3"
+                                   id="purchase_now_one">Purchase now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md">
+                        <div class="card card-pricing text-center px-3 border-0 hover-scale-110">
+                            <div class="card-header py-5 border-0 delimiter-bottom">
+                                <div class="h1 text-dark text-center mb-0"><span class="price font-weight-bolder"
+                                                                                  id="money_month">150 BDT</span>
+                                </div>
+                                <span class="h6 text-dark" id="per_month">Per Month</span>
+                            </div>
+                            <div class="card-body" id="per_month_text">
+                                <p class="text-dark">single account, limited database, data downloading subject to
+                                    restrictions</p>
+                                <a style="margin-top:20px;" href="#"
+                                   class="btn btn-sm btn-danger hover-translate-y-n3 hover-shadow-lg mb-3"
+                                   id="purchase_now_two">Purchase
+                                    now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="mt-5 text-center">
+            <p class="mb-2" id="need_more">
+                Both pricings contains all 6 months free support. Need more?
+            </p>
+            <a href="#" class="text-primary text-underline--dashed" id="contact_us">Contact us<i
+                    data-feather="arrow-right"
+                    class="ml-2"></i></a>
+        </div>
+    </div>
+</section>
+<div class="col-12 text-right mt-auto mb-7">
+    <a href="#section_1111"
+       class="scroll-to icon icon--small icon--has-shadow d-inline-block rounded-circle background--white">
+        <i style="margin-top: 10px;" class="fas fa-arrow-circle-up"></i>
+    </a>
+</div>
+
+<footer class="position-relative" id="footer-main">
+    <div class="footer pt-lg-7 footer-dark " style="background-color:#12235c;">
+
+        <div class="container pt-4">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <!-- Theme's logo -->
+                    <a href="index.html">
+                        <img alt="Image placeholder" src="assets/img/image/logosss.png" id="footer-logo">
+                    </a>
+                    <!-- Webpixels' mission -->
+                    <p class="mt-4 text-sm text-white opacity-8 pr-lg-4"> Legal library, with it's efficient team of translators and
+                        typists, is dedicated to
+                        provide you with excellent quality services. Legal Translation is available in
+                        various languages, i.e. Bengali,, English, ,Hindi, Urdu,
+                        e.t.c</p>
+                    <!-- Social -->
+                    <ul class="nav mt-4" style="color:#fff;">
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="https://dribbble.com/webpixels" target="_blank">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/webpixels" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.instagram.com/webpxs" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.facebook.com/webpixels" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 col-sm-4 ml-lg-auto mb-5 mb-lg-0" style="color:#fff;">
+                    <h6 class="heading mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="our_team.html" style="color:#fff;">Our Team</a></li>
+                        <li><a href="contact.html" style="color:#fff;">Contact Us</a></li>
+                        <li><a href="carrier.html" style="color:#fff;">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0" style="color:#fff;">
+                    <h6 class="heading mb-3">Information</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="terms_condition.html" style="color:#fff;">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" style="color:#fff;">We value your Privacy</a></li>
+                        <li><a href="legel_service.html" style="color:#fff;">Legal Services</a></li>
+                        <li><a href="#" style="color:#fff;">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0">
+                    <h6 class="heading mb-3" style="color:#fff;">Demo</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="request_demo.html" data-toggle="modal" data-target="#exampleModalLong" style="color:#fff;">Request Demo</a></li>
+
+                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="container">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-primary">
+                                            <h5 class="modal-title" style="color:#fff;">Request a Demo</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <!-- <form id="requestdemoform"> -->
+                                        <div class="modal-body">
+                                            <div class="text-center mb-4">
+
+                                            </div>
+                                            <div style="background-color: azure; color: green; display: none;" id="demosuccessmessage"></div>
+                                            <div class="form-group">
+                                                <label style="color:#000;">Name:<span class="required">*</span></label>
+                                                <input type="text" class="form-control form-control-sm " name="dname"
+                                                       id="dname" placeholder="Enter Name" autocomplete="off">
+                                                <span id="nameerror" style="display: none;"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label style="color:#000;">Email:<span class="required">*</span></label>
+                                                <input type="email" class="form-control  form-control-sm" name="demail"
+                                                       id="demail" placeholder="Enter Email">
+                                                <span id="emailerror" style="display: none;"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Phone:<span class="required">*</span></label>
+                                                <input type="number" class="form-control form-control-sm" name="dphone"
+                                                       id="dphone" placeholder="Enter Phone no.">
+                                                <span id="phoneerror" style="display: none;"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Position:<span class="required">*</span></label>
+                                                <select style="font-size: 14px;" class="form-control" id="dposition"
+                                                        name="dposition">
+                                                    <div class="col-lg-7">
+                                                        <option value="Select Position" selected="">Select Position
+                                                        </option>
+                                                        <option value="Practicing Attorney">Practicing Attorney</option>
+                                                        <option value="Judge">Judge</option>
+                                                        <option value="Librarian">Librarian</option>
+                                                        <option value="Knowledge Management professional">Knowledge
+                                                            Management professional
+                                                        </option>
+                                                        <option value="Law Student">Law Student</option>
+                                                        <option value="Faculty or Staff">Faculty or Staff</option>
+                                                        <option value="Representing myself in a legal matter">
+                                                            Representing myself in a legal matter
+                                                        </option>
+                                                        <option value="Other">Other</option>
+                                                    </div>
+                                                </select>
+                                                <span id="positionerror" style="display: none;"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Company/University/Organisation:</label>
+                                                <input type="text" class="form-control form-control-sm" name="dcompany"
+                                                       id="dcompany" placeholder="Enter Company">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Select State:</label>
+                                                        <select style="font-size: 14px;" class="form-control" id="state"
+                                                                name="state" onchange="getStates();">
+                                                            <option value="Select State" disabled="" selected="">Select
+                                                                State
+                                                            </option>
+                                                            <option value="Assam">Assam</option>
+                                                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                            <option value="Bihar">Bihar</option>
+                                                            <option value="Chandigarh">Chandigarh</option>
+                                                            <option value="Chhattisgarh">Chhattisgarh</option>
+                                                            <option value="Delhi">Delhi</option>
+                                                            <option value="Goa">Goa</option>
+                                                            <option value="Gujarat">Gujarat</option>
+                                                            <option value="Haryana">Haryana</option>
+                                                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                            <option value="Jharkhand">Jharkhand</option>
+                                                            <option value="Karnataka">Karnataka</option>
+                                                            <option value="Kerala">Kerala</option>
+                                                            <option value="Maharashtra">Maharashtra</option>
+                                                            <option value="Manipur">Manipur</option>
+                                                            <option value="Meghalaya">Meghalaya</option>
+                                                            <option value="Mizoram">Mizoram</option>
+                                                            <option value="Nagaland">Nagaland</option>
+                                                            <option value="Odisha">Odisha</option>
+                                                            <option value="Punjab">Punjab</option>
+                                                            <option value="Rajasthan">Rajasthan</option>
+                                                            <option value="Sikkim">Sikkim</option>
+                                                            <option value="Tamil Nadu">Tamil Nadu</option>
+                                                            <option value="Telangana">Telangana</option>
+                                                            <option value="Tripura">Tripura</option>
+                                                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                            <option value="Uttarakhand">Uttarakhand</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Select City:</label>
+                                                        <select style="font-size: 14px;" class="form-control" id="city"
+                                                                name="city">
+                                                            <!-- <option value="Select City" disabled selected>Select City</option> -->
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                            </button>
+                                            <button type="submit" id="demoBtn" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <li><a href="faq.html" style="color:#fff;">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+</body>
+</html>

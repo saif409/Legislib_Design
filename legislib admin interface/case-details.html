@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lexintell | All cases</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+    <section>
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item mt-2 mr-2">
+                <i class="fa fa-search"></i>
+            </li>
+            <li class="nav-item mr-2">
+                <button class="btn btn-primary"><i class="fa fa-plus-circle"></i> Add a case</button>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#" style="color:#152c5b;">
+                    <i class="far fa-user-circle"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                    <span class="dropdown-item dropdown-header">Profile</span>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                        <img src="dist/img/photo1.png" alt="" class="img-circle mr-2" style="height:30px;width:30px;">
+                        Saif Mahmud
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="my_account.html" class="dropdown-item">
+                        <i class="fas fa-user-cog mr-2"></i>My Account
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-sign-out-alt mr-2"></i> Logout
+                    </a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+        </ul>
+        </nav>
+
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                     style="opacity: .8">
+                <span class="brand-text font-weight-light">Legal Library</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                             with font-awesome or any other icon font library -->
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="all_cases.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    All Cases
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="act_list.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    Act List
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="all_courts.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    All courts
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="all_history.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    All History
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="all_judge.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    all judge
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="all_user.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    All User
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="case-details.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    Case Details
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Category wise cases.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    Category wise Cases
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    Contact
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="history.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    History
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="legel_service.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    Legel Service
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="legislation_data_view.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    Legislation Data View
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="my_account.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    My Account
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="request_form_client_admin_site.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    request form client admin site
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="request_from_client.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    Request From Client
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="search_result.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    Search Result
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="suggest_link.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    Suggest Link
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="update_contents.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    Update Contents
+                                </p>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+    </section>
+
+    <div class="content-wrapper">
+        <div class="content-header">
+        </div>
+
+        <section class="content">
+            <div class="container-fluid">
+                <div class="col-lg-12">
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="header-text text-white text-center mt-4" style="background-color:#7d8b99;">
+                                    <h3>IN THE SUPREME COURT OF BANGLADESH (HIGH COURT DIVISION)</h3>
+                                    <h5>Arbitration Application No. 12 of 2015</h5>
+                                    <p class="h6">Decided On: 27.05.2018</p>
+                                    <h6>Jalalabad Gas Transmission and Distribution System Limited</h6>
+                                    <h6>VS</h6>
+                                    <h6>Lafarge Surma Cement Limited</h6>
+                                </div>
+
+                                <div class="card-header text-center">
+                                </div>
+                                <hr style="height:2px;background-color:red">
+                                <div class="col-lg-12">
+                                    <h6 style="font-weight: bold;">Claimant</h6>
+                                    <p>AA-R(Iran)</p>
+
+                                    <h6 style="font-weight: bold;">Defendant</h6>
+                                    <p>Secretary of State for the Home Department</p>
+
+                                    <h6 style="font-weight: bold;">Also Reported In</h6>
+                                    <p>2013 EWCA Civ 835 , 185 ILR 403</p>
+
+                                    <h6 style="font-weight: bold;">Search Terms</h6>
+                                    <p style="text-align:justify;">['Crime and Sentencing Criminal Practice
+                                        Crime
+                                        Components Practice and Procedure Court Structure Courts Tribunals
+                                        Administrative and Constitutional Law Constitution Government Asylum
+                                        Immigration
+                                        and Nationality Asylum Human Rights Pensions Workplace Pension Military
+                                        Law
+                                        Armed Forces Military Staff']</p>
+
+                                    <h6 style="font-weight: bold;">Court</h6>
+                                    <p> England, Court of Appeal</p>
+
+                                    <h6 style="font-weight: bold;">Year</h6>
+                                    <p>2013</p>
+
+                                    <h6 style="font-weight: bold;">Treatment</h6>
+                                    <p>NA</p>
+
+                                    <h6 style="font-weight: bold;">Case No.</h6>
+                                    <p>None</p>
+
+                                    <h6 style="font-weight: bold;">Date</h6>
+                                    <p>Jan. 12, 2013</p>
+
+                                    <h6 style="font-weight: bold;">Judges</h6>
+                                    <p>None</p>
+
+                                    <h6 style="font-weight: bold;">Counsels</h6>
+                                    <p>None</p>
+
+                                    <h6 style="font-weight: bold;">Counsels</h6>
+                                    <p>Jan. 12, 2013</p>
+
+
+                                    <h6 style="font-weight: bold;">Subjects</h6>
+                                    <p>International Refugee Law</p>
+
+                                    <h6 style="font-weight: bold;">Cited In</h6>
+                                    <p>1 WLR 2809;</p>
+
+                                    <h6 style="font-weight: bold;">Subject Tree</h6>
+                                    <h6>None</h6>
+                                    <h3 class="text-center text-blod">Judgement</h3>
+                                    <hr style="height:2px;background-color:red">
+                                    <br>
+                                    <p class="text-dark" style="text-align:justify,color:#000;text-align:justify;">1.
+                                        This is an
+                                        application under section 42(2) read with section 43 of the Arbitration Act
+                                        2001, filed
+                                        by the respondent-petitioner, Jalalabad Gas Transmission and Distribution
+                                        System Limited,
+                                        against the claimant respondent, Lafarge Surma Cement Limited, against the
+                                        Umpire Tribunal,
+                                        consisting of Mr. Justice Md. Tafazzal Islam as Chairman/Umpire, Dr Gavan
+                                        Griffith QC and Mr.
+                                        Justice Md. Fazlul Karim the former honorable Chief Justice of Bangladesh as
+                                        Arbitrators for the
+                                        contesting parties. In order to resolve the dispute, arisen as to the
+                                        payment of gas bill by the
+                                        Lafarge Surma Cement Limited, the 1st party claimant, to the Jalalabad Gas
+                                        Distribution and
+                                        System Limited, the 2nd party.
+                                        2. The aforesaid Arbitration Tribunal was constituted by the parties Lafarge
+                                        Surma Cement Limited
+                                        as 1st party-claimant and the Jalalabad Gas Distribution and System Limited
+                                        as 2nd party in order
+                                        resolve the dispute arisen in between them in respect of payment of gas
+                                        bill, so far the buyers
+                                        force majeure invoked by the claimant for the period of 28-10-2007 up to
+                                        29-11-2007 and also for
+                                        the period 12-4-2010 up to 15-5-2010. The said arbitration was held in Dhaka
+                                        and two of the
+                                        arbitrators being Dr. Gavan Griffith QC and Mr. Md. Justice Fazlul Karim
+                                        have issued split award
+                                        for which the umpire his lordship Mr. Justice Tafazzal Islam has also issued
+                                        separate award,
+                                        which, being final, resolved the issue in between the parties in the
+                                        following manner;
+                                        In respect of the claim of claimant against the buyer force majeure for the
+                                        period between 12 April
+                                        2010 and 9 August 2011, the tribunal declares that:
+                                        (a) Except for the period between 12 April 2010 and 15 May 2010, the
+                                        invocation of buyer force
+                                        majeure by the Claimant is valid.
+                                        (b) The obligation of the claimant during the buyer force majeure was
+                                        limited to payment of gas
+                                        bills for gas actually consumed.
+                                        (c) The claimant must pay the respondent the moneys due for Take-or-Pay
+                                        Quantity of gas during
+                                        the period between 12 April 2010 and 15 May 2010 together with simple
+                                        interest calculated at the
+                                        rate of 6% from the due date for payment until paid under this award.
+                                        (d) The claimant is not otherwise liable to pay further moneys to the
+                                        respondent under the terms of
+                                        the GSA.
+                                        (e) The claimant is awarded costs of Tk. 75,00,000 (Taka Seventy five lacs
+                                        only).
+                                        3. Being aggrieved with and highly dissatisfied by the said umpire award,
+                                        the 2nd party
+                                        respondent Jalalabad Gas Distribution and System Limited preferred the
+                                        instant application under
+                                        section 42(2) of the Arbitration Act, 2001 as petitioner on certain grounds
+                                        mentioned in the
+                                        application itself and prayed for cancellation of the impugned award issued
+                                        by the umpire and to
+                                        approve the split award passed by his lordship Mr. Justice Md. Fazlul Karim.
+                                        4. The 1st party-claimant, herein respondent Lafarge Surma Cement Limited
+                                        appeared and filed
+                                        affidavit-in-opposition, dated 31-3-2016 entry No. 1725, wherein it has been
+                                        asserted that the
+                                        grounds taken by the petitioner-2nd party in the instant application are
+                                        merely repeat of the
+                                        contention and submission made by the 2nd party in the arbitration regarding
+                                        the substance of the
+                                        dispute and since the arbitral tribunal having considered these contentions
+                                        and submissions it do
+                                        not make out any ground whatsoever for getting a setting aside of the
+                                        arbitration award, under the
+                                        provision of section 42 of the Arbitration Act, 2001. The findings of the
+                                        arbitral tribunal on the
+                                        substance of the dispute being valid and sound under the applicable law, it
+                                        does not warrant any
+                                        interference by this court, under the provision of section 42 of the
+                                        Arbitration Act, 2001.
+                                        5. The learned Advocate Mr. Azim Khair, appeared on behalf of the 2nd party
+                                        petitioner, while the
+                                        learned Advocate Dr Sharif Bhuiyan, along with the learned Advocate Mr.
+                                        Tanim Hossain Shawon,
+                                        appeared on behalf of the 1st party claimant-respondent, at the time of
+                                        hearing of the instant
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<script>$.widget.bridge('uibutton', $.ui.button)</script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/chart.js/Chart.min.js"></script>
+<script src="plugins/sparklines/sparkline.js"></script>
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="dist/js/adminlte.js"></script>
+<script src="dist/js/pages/dashboard.js"></script>
+<script src="dist/js/demo.js"></script>
+</body>
+</html>
