@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lex Intell | Home</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bbootstrap 4 -->
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color:#3d3a30;">
+    <a href="#"><img src="assets/img/image/logo.png" class="img-fluid img-thumbnail" alt=""
+                     style="height:40px;width:48;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#" style="color:#fff;"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#" style="color:#fff;">CASE MANAGER</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color:#fff;">CASE SEARCH</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color:#fff;">LEGISLATION</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color:#fff;">BANGLADESH GAZETTE</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+                <a class="nav-link" style="color:#fff;"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color:#fff;"><i class="fab fa-instagram"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="background-color:#3d3a30;height:120px;">
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8" style="margin-top:30px;">
+            <form class="form-inline my-2 my-lg-0 ">
+                <input class="form-control col-lg-10" type="search" placeholder="Search" aria-label="Search"
+                       style="height:50px;">
+                <button class="btn btn-default my-2 my-sm-0" type="submit" data-toggle="modal"
+                        data-target="#exampleModal" style="background-color:#ed8932;height:50px;width:75px;"><i
+                        class="fa fa-search"></i></button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background-color:#7d8b99;">
+                                <h5 class="modal-title" id="exampleModalLabel" style="color:#fff;">Please Inform Us, Who
+                                    You
+                                    Are</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-question">First Name <span
+                                                    style="color:red;">*</span></label>
+                                            <input class="form-control" name="question" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-question">Last Name <span
+                                                    style="color:red;">*</span></label>
+                                            <input id="input-question" class="form-control" name="question"
+                                                   type="text" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">User Name<span style="color:red;">*</span></label>
+                                            <input class="form-control" name="username" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Phone<span
+                                                    style="color:red;">*</span></label>
+                                            <input class="form-control" name="phone" type="text" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Email<span
+                                                    style="color:red;">*</span></label>
+                                            <input class="form-control" name="email" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Adress<span
+                                                    style="color:red;">*</span></label>
+                                            <input class="form-control" name="adress" type="text" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close
+                                </button>
+                                <button type="button" class="btn btn-primary btn-sm">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-2 ">
+            <div class="text" style="color:#fff; margin-top:20px;">
+                <p>Select Language</p>
+                <p><input name="language" value="english" id="english" type="radio">
+                    English <span style="border-right: 2px solid #707070;margin: 0 5px"></span>
+                    <input type="radio" name="language" value="bangla" id="বাংলা">
+                    বাংলা</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section>
+    <div class="row" style="margin:70px;">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="container">
+                    <div class="form-group">
+                        <form id="contact-form" method="GET" action="/case/advance-case-search/">
+
+                            <div class="row">
+
+                                <div class="pl-lg-5">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-username">Claimant</label>
+                                                <input type="text" id="input-username" class="form-control" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Defendant</label>
+                                                <input type="email" id="input-email" class="form-control" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-username">Year</label>
+                                                <input type="text" id="input-username" class="form-control" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Source</label>
+                                                <input type="email" id="input-email" class="form-control" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <label class="form-control-label" for="input-username">Court</label>
+                                            <div class="form-group">
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">test</option>
+                                                    <option value="">test</option>
+                                                    <option value="">test</option>
+                                                    <option value="">test</option>
+                                                    <option value="">test</option>
+                                                    <option value="">test</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Search Terms</label>
+                                                <input type="email" id="input-email" class="form-control" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <input name="home_search_filter" type="hidden">
+
+                                <div class="col-lg-12 col-md-12">
+                                    <button type="submit" class=" btn btn-primary float-right">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="col-12 text-right mt-auto mb-7">
+    <a href="#section_1111"
+       class="scroll-to icon icon--small icon--has-shadow d-inline-block rounded-circle background--white">
+        <i style="margin-top: 10px;" class="fas fa-arrow-circle-up"></i>
+    </a>
+</div>
+
+<footer class="position-relative" id="footer-main">
+    <div class="footer pt-lg-7 footer-dark " style="background-color:#12235c;">
+
+        <div class="container pt-4">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <!-- Theme's logo -->
+                    <a href="index.html">
+                        <img alt="Image placeholder" src="assets/img/image/logosss.png" id="footer-logo">
+                    </a>
+                    <!-- Webpixels' mission -->
+                    <p class="mt-4 text-sm text-white opacity-8 pr-lg-4"> Legal library, with it's efficient team of
+                        translators and
+                        typists, is dedicated to
+                        provide you with excellent quality services. Legal Translation is available in
+                        various languages, i.e. Bengali,, English, ,Hindi, Urdu,
+                        e.t.c</p>
+                    <!-- Social -->
+                    <ul class="nav mt-4" style="color:#fff;">
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="https://dribbble.com/webpixels" target="_blank">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/webpixels" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.instagram.com/webpxs" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.facebook.com/webpixels" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 col-sm-4 ml-lg-auto mb-5 mb-lg-0" style="color:#fff;">
+                    <h6 class="heading mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="our_team.html" style="color:#fff;">Our Team</a></li>
+                        <li><a href="contact.html" style="color:#fff;">Contact Us</a></li>
+                        <li><a href="carrier.html" style="color:#fff;">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0" style="color:#fff;">
+                    <h6 class="heading mb-3">Information</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="terms_condition.html" style="color:#fff;">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" style="color:#fff;">We value your Privacy</a></li>
+                        <li><a href="legel_service.html" style="color:#fff;">Legal Services</a></li>
+                        <li><a href="#" style="color:#fff;">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0">
+                    <h6 class="heading mb-3" style="color:#fff;">Demo</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="request_demo.html" data-toggle="modal" data-target="#exampleModalLong"
+                               style="color:#fff;">Request Demo</a></li>
+
+                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="container">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-primary">
+                                            <h5 class="modal-title" style="color:#fff;">Request a Demo</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <!-- <form id="requestdemoform"> -->
+                                        <div class="modal-body">
+                                            <div class="text-center mb-4">
+
+                                            </div>
+                                            <div style="background-color: azure; color: green; display: none;"
+                                                 id="demosuccessmessage"></div>
+                                            <div class="form-group">
+                                                <label style="color:#000;">Name:<span class="required">*</span></label>
+                                                <input type="text" class="form-control form-control-sm " name="dname"
+                                                       id="dname" placeholder="Enter Name" autocomplete="off">
+                                                <span id="nameerror" style="display: none;"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label style="color:#000;">Email:<span class="required">*</span></label>
+                                                <input type="email" class="form-control  form-control-sm" name="demail"
+                                                       id="demail" placeholder="Enter Email">
+                                                <span id="emailerror" style="display: none;"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Phone:<span class="required">*</span></label>
+                                                <input type="number" class="form-control form-control-sm" name="dphone"
+                                                       id="dphone" placeholder="Enter Phone no.">
+                                                <span id="phoneerror" style="display: none;"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Position:<span class="required">*</span></label>
+                                                <select style="font-size: 14px;" class="form-control" id="dposition"
+                                                        name="dposition">
+                                                    <div class="col-lg-7">
+                                                        <option value="Select Position" selected="">Select Position
+                                                        </option>
+                                                        <option value="Practicing Attorney">Practicing Attorney</option>
+                                                        <option value="Judge">Judge</option>
+                                                        <option value="Librarian">Librarian</option>
+                                                        <option value="Knowledge Management professional">Knowledge
+                                                            Management professional
+                                                        </option>
+                                                        <option value="Law Student">Law Student</option>
+                                                        <option value="Faculty or Staff">Faculty or Staff</option>
+                                                        <option value="Representing myself in a legal matter">
+                                                            Representing myself in a legal matter
+                                                        </option>
+                                                        <option value="Other">Other</option>
+                                                    </div>
+                                                </select>
+                                                <span id="positionerror" style="display: none;"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Company/University/Organisation:</label>
+                                                <input type="text" class="form-control form-control-sm" name="dcompany"
+                                                       id="dcompany" placeholder="Enter Company">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Select State:</label>
+                                                        <select style="font-size: 14px;" class="form-control" id="state"
+                                                                name="state" onchange="getStates();">
+                                                            <option value="Select State" disabled="" selected="">Select
+                                                                State
+                                                            </option>
+                                                            <option value="Assam">Assam</option>
+                                                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                            <option value="Bihar">Bihar</option>
+                                                            <option value="Chandigarh">Chandigarh</option>
+                                                            <option value="Chhattisgarh">Chhattisgarh</option>
+                                                            <option value="Delhi">Delhi</option>
+                                                            <option value="Goa">Goa</option>
+                                                            <option value="Gujarat">Gujarat</option>
+                                                            <option value="Haryana">Haryana</option>
+                                                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                            <option value="Jharkhand">Jharkhand</option>
+                                                            <option value="Karnataka">Karnataka</option>
+                                                            <option value="Kerala">Kerala</option>
+                                                            <option value="Maharashtra">Maharashtra</option>
+                                                            <option value="Manipur">Manipur</option>
+                                                            <option value="Meghalaya">Meghalaya</option>
+                                                            <option value="Mizoram">Mizoram</option>
+                                                            <option value="Nagaland">Nagaland</option>
+                                                            <option value="Odisha">Odisha</option>
+                                                            <option value="Punjab">Punjab</option>
+                                                            <option value="Rajasthan">Rajasthan</option>
+                                                            <option value="Sikkim">Sikkim</option>
+                                                            <option value="Tamil Nadu">Tamil Nadu</option>
+                                                            <option value="Telangana">Telangana</option>
+                                                            <option value="Tripura">Tripura</option>
+                                                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                            <option value="Uttarakhand">Uttarakhand</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Select City:</label>
+                                                        <select style="font-size: 14px;" class="form-control" id="city"
+                                                                name="city">
+                                                            <!-- <option value="Select City" disabled selected>Select City</option> -->
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                            </button>
+                                            <button type="submit" id="demoBtn" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <li><a href="faq.html" style="color:#fff;">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+
+
+
+
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+</body>
+</html>
+
+
