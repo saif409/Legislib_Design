@@ -251,10 +251,78 @@
                 <div class="col-lg-12">
                     <div class="row">
 
-                        <div class="col-lg-12">
+                        <div class="col-lg-11">
+                            <div class="card">
+                                <div class="container" id="add_note">
+
+                                    <div class="card-header">
+                                        <button style="float: right;" id="delete">x</button>
+                                        <h3>Notes</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="noteInput" class="mb-4" style="">
+                                            <form method="post" autocomplete="off">
+                                                <input type="hidden" name="csrfmiddlewaretoken" value="">
+                                                <label>Title: </label>
+                                                <input name="title" class="form-control mb-3" required="">
+                                                <label>Description: </label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                       name="editor1">
+                                                <small class="error-text" id="noteError"></small>
+                                                <button class="btn btn-sm mt-2 btn-info" type="button"
+                                                        onclick="$(&quot;#noteInput&quot;).hide()">Cancle
+                                                </button>&nbsp; &nbsp;
+                                                <button class="btn btn-sm mt-2 btn-info" type="submit">Save</button>
+                                            </form>
+                                        </div>
+
+                                        <div id="noteOutput" class="pd-3 pt-3" style="background: #ebecf1;">
+                                            <div class="card" style="width: 100%;">
+                                                <ul class="list-group list-group-flush" id="annote">
+
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="container" id="list">
+                                    <div class="card-header">
+                                        <button style="float: right;" id="delete_list">x</button>
+                                        <h3>Notes</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                       <table class="table table-bordered">
+                                              <thead>
+                                                <tr>
+                                                  <th scope="col">SL</th>
+                                                  <th scope="col">Title</th>
+
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <th scope="row">1</th>
+                                                  <td>
+                                                      <p style="text-align:justify;">
+                                                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                                          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                                      </p>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                    </div>
+                                    </div>
+
+                                </div>
+                            </div>
                             <div class="card">
                                 <div class="header-text text-white text-center mt-4" style="background-color:#7d8b99;">
-                                    <h3 style="margin-top:20px;">IN THE SUPREME COURT OF BANGLADESH (HIGH COURT DIVISION)</h3>
+                                    <h3 style="margin-top:20px;">IN THE SUPREME COURT OF BANGLADESH (HIGH COURT
+                                        DIVISION)</h3>
                                     <h5>Arbitration Application No. 12 of 2015</h5>
                                     <p class="h6">Decided On: 27.05.2018</p>
                                     <h6>Jalalabad Gas Transmission and Distribution System Limited</h6>
@@ -265,25 +333,25 @@
                                 <div class="card-header text-center">
                                 </div>
                                 <hr style="height:2px;background-color:red">
-                                <div class="col-lg-12" >
-                                     <div class="form-group row" style="margin:20px;">
+                                <div class="col-lg-12">
+                                    <div class="form-group row" style="margin:20px;">
                                         <label class="col-sm-2 col-form-label">Claimant :</label>
                                         <div class="col-sm-10 mt-2">
-                                          <p>AA-R(Iran)</p>
+                                            <p>AA-R(Iran)</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row" style="margin:20px;">
                                         <label class="col-sm-2 col-form-label">Defendant :</label>
                                         <div class="col-sm-10 mt-2">
-                                          <p>Secretary of State for the Home Department</p>
+                                            <p>Secretary of State for the Home Department</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row" style="margin:20px;">
                                         <label class="col-sm-2 col-form-label">Also Reported In :</label>
                                         <div class="col-sm-10 mt-2">
-                                          <p>2013 EWCA Civ 835 , 185 ILR 403</p>
+                                            <p>2013 EWCA Civ 835 , 185 ILR 403</p>
                                         </div>
                                     </div>
 
@@ -291,30 +359,29 @@
                                     <div class="form-group row" style="margin:20px;">
                                         <label class="col-sm-2 col-form-label">Search Terms :</label>
                                         <div class="col-sm-10 mt-2">
-                                          <p style="text-align:justify;">['Crime and Sentencing Criminal Practice
-                                        Crime
-                                        Components Practice and Procedure Court Structure Courts Tribunals
-                                        Administrative and Constitutional Law Constitution Government Asylum
-                                        Immigration
-                                        and Nationality Asylum Human Rights Pensions Workplace Pension Military
-                                        Law
-                                        Armed Forces Military Staff']</p>
+                                            <p style="text-align:justify;">['Crime and Sentencing Criminal Practice
+                                                Crime
+                                                Components Practice and Procedure Court Structure Courts Tribunals
+                                                Administrative and Constitutional Law Constitution Government Asylum
+                                                Immigration
+                                                and Nationality Asylum Human Rights Pensions Workplace Pension Military
+                                                Law
+                                                Armed Forces Military Staff']</p>
                                         </div>
                                     </div>
 
 
-
-                                  <div class="form-group row" style="margin:20px;">
+                                    <div class="form-group row" style="margin:20px;">
                                         <label class="col-sm-2 col-form-label">Court :</label>
                                         <div class="col-sm-10 mt-2">
-                                          <p>England, Court of Appeal</p>
+                                            <p>England, Court of Appeal</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row" style="margin:20px;">
                                         <label class="col-sm-2 col-form-label">Year :</label>
                                         <div class="col-sm-10 mt-2">
-                                          <p>2013</p>
+                                            <p>2013</p>
                                         </div>
                                     </div>
 
@@ -322,7 +389,7 @@
                                     <div class="form-group row" style="margin:20px;">
                                         <label class="col-sm-2 col-form-label">Treatment :</label>
                                         <div class="col-sm-10 mt-2">
-                                          <p>NA</p>
+                                            <p>NA</p>
                                         </div>
                                     </div>
 
@@ -330,7 +397,7 @@
                                     <div class="form-group row" style="margin:20px;">
                                         <label class="col-sm-2 col-form-label">Case No. :</label>
                                         <div class="col-sm-10 mt-2">
-                                          <p>None</p>
+                                            <p>None</p>
                                         </div>
                                     </div>
 
@@ -338,7 +405,7 @@
                                     <div class="form-group row" style="margin:20px;">
                                         <label class="col-sm-2 col-form-label">Date :</label>
                                         <div class="col-sm-10 mt-2">
-                                          <p>Jan. 12, 2013</p>
+                                            <p>Jan. 12, 2013</p>
                                         </div>
                                     </div>
 
@@ -346,16 +413,7 @@
                                     <div class="form-group row" style="margin:20px;">
                                         <label class="col-sm-2 col-form-label">Judges :</label>
                                         <div class="col-sm-10 mt-2">
-                                          <p>None</p>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="form-group row" style="margin:20px;">
-                                        <label class="col-sm-2 col-form-label">Counsels :</label>
-                                        <div class="col-sm-10 mt-2">
-                                          <p>None</p>
+                                            <p>None</p>
                                         </div>
                                     </div>
 
@@ -363,16 +421,23 @@
                                     <div class="form-group row" style="margin:20px;">
                                         <label class="col-sm-2 col-form-label">Counsels :</label>
                                         <div class="col-sm-10 mt-2">
-                                          <p>Jan. 12, 2013</p>
+                                            <p>None</p>
                                         </div>
                                     </div>
 
+
+                                    <div class="form-group row" style="margin:20px;">
+                                        <label class="col-sm-2 col-form-label">Counsels :</label>
+                                        <div class="col-sm-10 mt-2">
+                                            <p>Jan. 12, 2013</p>
+                                        </div>
+                                    </div>
 
 
                                     <div class="form-group row" style="margin:20px;">
                                         <label class="col-sm-2 col-form-label">Subjects :</label>
                                         <div class="col-sm-10 mt-2">
-                                          <p>International Refugee Law</p>
+                                            <p>International Refugee Law</p>
                                         </div>
                                     </div>
 
@@ -380,7 +445,7 @@
                                     <div class="form-group row" style="margin:20px;">
                                         <label class="col-sm-2 col-form-label">Cited In :</label>
                                         <div class="col-sm-10 mt-2">
-                                          <p>1 WLR 2809;</p>
+                                            <p>1 WLR 2809;</p>
                                         </div>
                                     </div>
 
@@ -388,14 +453,15 @@
                                     <div class="form-group row" style="margin:20px;">
                                         <label class="col-sm-2 col-form-label">Subject Tree :</label>
                                         <div class="col-sm-10 mt-2">
-                                          <p>None</p>
+                                            <p>None</p>
                                         </div>
                                     </div>
 
                                     <h3 class="text-center text-blod">Judgement</h3>
                                     <hr style="height:2px;background-color:red">
                                     <br>
-                                    <p class="text-dark" style="margin:20px;text-align:justify,color:#000;text-align:justify;">1.
+                                    <p class="text-dark"
+                                       style="margin:20px;text-align:justify,color:#000;text-align:justify;">1.
                                         This is an
                                         application under section 42(2) read with section 43 of the Arbitration Act
                                         2001, filed
@@ -485,6 +551,44 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-1">
+                            <div class="col-lg-9">
+                                <div class="card" style="position:fixed;">
+                                    <div class="container">
+                                        <tbody>
+                                        <tr>
+                                            <td><a href=""><i class="fa fa-envelope text-dark"></i></a></td>
+                                        </tr>
+                                        <br>
+
+                                        <tr>
+                                            <td style="padding-top: 10px;"><a style="cursor: pointer;">
+                                                <i class="fas fa-print text-dark"></i></a></td>
+                                        </tr>
+                                        <br>
+
+                                        <tr>
+                                            <td style="padding-top: 10px;"><a style="cursor: pointer;">
+                                                <i class="fas fa-download text-dark"></i></a></td>
+                                        </tr>
+                                        <br>
+
+                                        <tr>
+                                            <td style="padding-top: 10px;"><a href="#add_note" class="text-dark" title="add notes" style="cursor: pointer;">
+                                                <i class="fas fa-clipboard text-dark" id="show"></i>+</a></td>
+                                        </tr>
+                                        <br>
+                                        <tr>
+                                            <td style="padding-top: 10px;"><a href="#list" style="cursor: pointer;">
+                                                <i class="fas fa-clipboard text-dark" id="list_show"></i> </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -495,8 +599,41 @@
 
 
 <script src="plugins/jquery/jquery.min.js"></script>
+<script>
+$("#add_note").hide();
+$("#list").hide();
+
+    $(document).ready(function(){
+      $("#show").click(function(){
+        $("#add_note").show();
+        $("#list").hide();
+      });
+    });
+
+    $(document).ready(function(){
+      $("#delete").click(function(){
+        $("#add_note").hide();
+      });
+    });
+
+    $(document).ready(function(){
+      $("#list_show").click(function(){
+        $("#list").show();
+        $("#add_note").hide();
+      });
+    });
+
+    $(document).ready(function(){
+      $("#delete_list").click(function(){
+        $("#list").hide();
+      });
+    });
+
+</script>
+<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 <script>$.widget.bridge('uibutton', $.ui.button)</script>
+<script>CKEDITOR.replace( 'editor1' );</script>
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="plugins/chart.js/Chart.min.js"></script>
 <script src="plugins/sparklines/sparkline.js"></script>
@@ -511,5 +648,8 @@
 <script src="dist/js/adminlte.js"></script>
 <script src="dist/js/pages/dashboard.js"></script>
 <script src="dist/js/demo.js"></script>
+<script>
+
+</script>
 </body>
 </html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lexintell | All Search Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+    <section class="content">
+        <div class="container-fluid" style="margin-top:20px;">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="test mb-4 text-center" style="border-radius:5px;background-color:#152c5b;;">
+                        <h3 style="color:#fff;">Search Result</h3>
+                    </div>
+
+                    <input id="uriId" value="" class="sr-only">
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-3 overflow-auto">
+                            <div class="container ">
+                                <div class="card">
+                                    <div class="card-header bg-info">
+                                        <h3 style="color:#fff;">Filters</h3>
+                                    </div>
+                                    <div class="card-body">
+
+
+                                        <div class="form-inline">
+                                            <div class="row">
+                                                <div class="col-lg-7">
+                                                    <div class="form-group mx-sm-3 mb-2">
+                                                        <input type="text" name="searchWithinSearchedResult"
+                                                               class="form-control"
+                                                               placeholder="Search with search results.."
+                                                               id="id_searchWithinSearchedResult">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <button class="btn mb-2  btn-info" type="button"
+                                                            onclick="submitForm()">Search
+                                                    </button>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+                                        <br>
+                                        <span style="display:inline-block;">Select Multiple</span>
+                                        <label class="switch" style="display:inline-block;">
+                                            <input type="checkbox" id="multipleSelectId"
+                                                   onclick="selectMultiple(this)"><span
+                                                id="slidebutton" class="slider round"></span>
+                                        </label>
+                                        <br>
+                                        <button class="btn btn-info btn-sm display-none" id="applybutton"
+                                                style="background: #2196F3; color: white" type="button"
+                                                onclick="submitForm()">Apply
+                                        </button>
+
+
+                                    </div>
+                                </div>
+                                <div class="card" style="margin-top: 30px;">
+                                    <div class="card-header bg-info">
+                                        <p class="mb-0 text-white">Content Type </p>
+                                    </div>
+                                    <div class="card-body">
+
+                                        <div id="contentTypeList">
+
+                                            <input type="radio" name="contentX" value=""
+                                                   class="form-check-label"
+                                                   onclick="addContentFilter(this) " checked="">
+                                            <small>All</small>
+
+                                            <span id="allCount" style="float: right;">
+                            64794
+                        </span>
+                                            <br>
+
+                                            <input type="radio" name="contentX" value="case"
+                                                   class="form-check-label" onclick="addContentFilter(this)">
+                                            <small>Case</small>
+
+                                            <span id="caseCount" style="float: right;">
+                            61943
+                        </span>
+                                            <br>
+
+                                            <input type="radio" name="contentX" value="legislation"
+                                                   class="form-check-label" onclick="addContentFilter(this)">
+                                            <small>Legislation</small>
+
+                                            <span id="legislationCount" style="float: right;">
+                            2851
+                        </span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="margin-top: 30px;">
+                                    <div class="card-header bg-info">
+                                        <p class="mb-0 text-white">Topic</p>
+                                    </div>
+                                    <div class="card-body"></div>
+                                </div>
+                                <div class="card" style="margin-top: 30px;">
+                                    <div class="card-header bg-info">
+                                        <p class="mb-0 text-white">Subject</p>
+                                    </div>
+                                    <div class="card-body"></div>
+                                </div>
+                                <div class="card" style="margin-top: 30px;">
+                                    <div class="card-header bg-info">
+                                        <p class="mb-0 text-white">Court</p>
+                                    </div>
+                                    <div class="card-body"></div>
+                                </div>
+                                <div class="card" style="margin-top: 30px;">
+                                    <div class="card-header bg-info">
+                                        <p class="mb-0 text-white">Date</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <hr class="mt-0 mb-3">
+                                        <input type="radio" value="0" name="filterByDate"
+                                               class="form-check-label"
+                                               onclick="addDateFilter(this)" checked="">
+                                        <small>All</small>
+
+                                        <span id="docAll" style="float: right;">
+                    64794
+                </span>
+                                        <br>
+
+                                        <input type="radio" value="183" name="filterByDate"
+                                               class="form-check-label"
+                                               onclick="addDateFilter(this)">
+                                        <small>Last 6 months</small>
+
+                                        <span id="doc2" style="float: right;">
+                    6
+                </span>
+                                        <br>
+
+
+                                        <input type="radio" value="365" name="filterByDate"
+                                               class="form-check-label"
+                                               onclick="addDateFilter(this)">
+                                        <small>Last 12 months</small>
+
+                                        <span id="doc1" style="float: right;">
+                    457
+                </span>
+                                        <br>
+
+
+                                        <input type="radio" value="1096" name="filterByDate"
+                                               class="form-check-label" onclick="addDateFilter(this)">
+                                        <small>Last 3 years</small>
+
+                                        <span id="doc0" style="float: right;">
+                    4138
+                </span>
+                                        <br>
+                                        <hr class="mt-1 mb-2">
+
+
+                                        <input type="radio" value="before" name="filterByDate"
+                                               class="form-check-label" onclick="showDateField('#before')">
+                                        <small>All cases before</small>
+
+
+                                        <span style="float: right;">
+
+                </span>
+                                        <br>
+
+                                        <div id="before" style="display:none;">
+                                            <br>
+                                            <input id="date-before" type="date" class="form-control"
+                                                   required="">
+                                            <br>
+                                            <button class="form-control mb-4"
+                                                    style="background: #2196F3; color: white" type="button"
+                                                    onclick="customDate('#before')">OK
+                                            </button>
+                                        </div>
+
+
+                                        <input type="radio" value="after" name="filterByDate"
+                                               class="form-check-label" onclick="showDateField('#after')">
+
+                                        <small>All cases after</small>
+
+                                        <span style="float: right;">
+                </span>
+                                        <br>
+
+                                        <div id="after" style="display:none;">
+                                            <br>
+                                            <input type="date" id="date-after" class="form-control" required="">
+                                            <br>
+                                            <button class="form-control mb-4"
+                                                    style="background: #2196F3; color: white;" type="button"
+                                                    onclick="customDate('#after')">OK
+                                            </button>
+                                        </div>
+
+
+                                        <div id="specific" style="display:none;">
+                                            <br>
+                                            <input type="date" id="date-specific" class="form-control"
+                                                   required="">
+                                            <br>
+                                            <button class="form-control mb-4"
+                                                    style="background: #2196F3; color: white;" type="button"
+                                                    onclick="customDate('#specific')">OK
+                                            </button>
+                                        </div>
+
+
+                                        <div id="custom-date" style="display:none;">
+                                            <br>
+                                            <p>From Date</p>
+                                            <input type="date" id="custom-date1" class="form-control"
+                                                   required="">
+                                            <br><br>
+                                            <p>To Date</p>
+                                            <input type="date" id="custom-date2" class="form-control"
+                                                   required="">
+                                            <br>
+                                            <button class="form-control mb-4"
+                                                    style="background: #2196F3; color: white;" type="button"
+                                                    onclick="customDate('#custom-date')">OK
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+
+                            <div class="card-body">
+
+                                <div id="casetable" class="table-responsive">
+
+                                    <div class="container" style="margin-bottom:10px;">
+                                        <button class="float-right btn btn-info ml-2" type="button" id="copyButton">
+                                            <strong>Copy page link</strong></button>
+                                        <div id="shareToFb">
+                                            <div class=" btn btn-info float-right ml-2"
+                                                 data-href="" data-layout="button" data-size="large"
+                                                 style="background-color:#152c5d;"><a target="_blank" href=""
+                                                                                      class="fb-xfbml-parse-ignore">
+                                                <strong style="color:#fff;">Share On FB</strong></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="container">
+                                        <p id="dynamic_cited_case_id" class="sr-only"></p>
+                                        <p id="dynamic_cited_type" class="sr-only"></p>
+                                        <br>
+                                        <h3>Search Result for <span class="highlight-text">test</span></h3>
+                                        <h6 style="color: #555">Total Results Found: <span
+                                                id="totalCaseFoundSpan">548</span></h6>
+                                    </div>
+                                    <div class="container">
+                                        <div class="card">
+                                            <div class="col-lg-12 m-1">
+                                                <p class="h5"><a href="" target="_blank"
+                                                                 style="height: 30px;color: #0645AD; text-decoration: underline;">Union
+                                                    of India (UOI) Vs Maruthi Tubes (P.) Ltd.</a></p>
+                                                <p class="h6" style="color:#329300">Supreme Court of India |
+                                                    2013</p>
+                                                <p>2013 EWCA Civ 835 | 185 ILR 403</p>
+                                                <div id="sourceList">
+                                                    <p style="text-align:justify;">framing of an additional charge
+                                                        for the offence punishable Under Section 302 Indian |
+                                                        hand over further investigation to the Crime Branch or the
+                                                        CBI. The High Court dismissed |
+                                                        framing an additional charge for the offence punishable
+                                                        Under Section 302 Indian</p>
+                                                    <div class="row">
+                                                        <div class="col-lg-3">33 Hits in this document</div>
+                                                        <div class="col-lg-4"><a href="">prev <span>Next</span></a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-2 mt-2">
+                                                        <a href="">Cited By 2</a><br>
+                                                        <a href="">cases</a>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="card">
+                                            <div class="col-lg-12 m-1">
+                                                <p class="h5"><a href="" target="_blank"
+                                                                 style="height: 30px;color: #0645AD; text-decoration: underline;">Union
+                                                    of India (UOI) Vs Maruthi Tubes (P.) Ltd.</a></p>
+                                                <p class="h6" style="color:#329300">Supreme Court of India |
+                                                    2013</p>
+                                                <p>2013 EWCA Civ 835 | 185 ILR 403</p>
+                                                <div id="sourceList">
+                                                    <p style="text-align:justify;">framing of an additional charge
+                                                        for the offence punishable Under Section 302 Indian |
+                                                        hand over further investigation to the Crime Branch or the
+                                                        CBI. The High Court dismissed |
+                                                        framing an additional charge for the offence punishable
+                                                        Under Section 302 Indian</p>
+                                                    <div class="row">
+                                                        <div class="col-lg-3">33 Hits in this document</div>
+                                                        <div class="col-lg-4"><a href="">prev <span>Next</span></a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-2 mt-2">
+                                                        <a href="">Cited By 2</a><br>
+                                                        <a href="">cases</a>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="card">
+                                            <div class="col-lg-12 m-1">
+                                                <p class="h5"><a href="" target="_blank"
+                                                                 style="height: 30px;color: #0645AD; text-decoration: underline;">Union
+                                                    of India (UOI) Vs Maruthi Tubes (P.) Ltd.</a></p>
+                                                <p class="h6" style="color:#329300">Supreme Court of India |
+                                                    2013</p>
+                                                <p>2013 EWCA Civ 835 | 185 ILR 403</p>
+                                                <div id="sourceList">
+                                                    <p style="text-align:justify;">framing of an additional charge
+                                                        for the offence punishable Under Section 302 Indian |
+                                                        hand over further investigation to the Crime Branch or the
+                                                        CBI. The High Court dismissed |
+                                                        framing an additional charge for the offence punishable
+                                                        Under Section 302 Indian</p>
+                                                    <div class="row">
+                                                        <div class="col-lg-3">33 Hits in this document</div>
+                                                        <div class="col-lg-4"><a href="">prev <span>Next</span></a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-2 mt-2">
+                                                        <a href="">Cited By 2</a><br>
+                                                        <a href="">cases</a>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="card">
+                                            <div class="col-lg-12 m-1">
+                                                <p class="h5"><a href="" target="_blank"
+                                                                 style="height: 30px;color: #0645AD; text-decoration: underline;">Union
+                                                    of India (UOI) Vs Maruthi Tubes (P.) Ltd.</a></p>
+                                                <p class="h6" style="color:#329300">Supreme Court of India |
+                                                    2013</p>
+                                                <p>2013 EWCA Civ 835 | 185 ILR 403</p>
+                                                <div id="sourceList">
+                                                    <p style="text-align:justify;">framing of an additional charge
+                                                        for the offence punishable Under Section 302 Indian |
+                                                        hand over further investigation to the Crime Branch or the
+                                                        CBI. The High Court dismissed |
+                                                        framing an additional charge for the offence punishable
+                                                        Under Section 302 Indian</p>
+                                                    <div class="row">
+                                                        <div class="col-lg-3">33 Hits in this document</div>
+                                                        <div class="col-lg-4"><a href="">prev <span>Next</span></a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-2 mt-2">
+                                                        <a href="">Cited By 2</a><br>
+                                                        <a href="">cases</a>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="card">
+                                            <div class="col-lg-12 m-1">
+                                                <p class="h5"><a href="" target="_blank"
+                                                                 style="height: 30px;color: #0645AD; text-decoration: underline;">Union
+                                                    of India (UOI) Vs Maruthi Tubes (P.) Ltd.</a></p>
+                                                <p class="h6" style="color:#329300">Supreme Court of India |
+                                                    2013</p>
+                                                <p>2013 EWCA Civ 835 | 185 ILR 403</p>
+                                                <div id="sourceList">
+                                                    <p style="text-align:justify;">framing of an additional charge
+                                                        for the offence punishable Under Section 302 Indian |
+                                                        hand over further investigation to the Crime Branch or the
+                                                        CBI. The High Court dismissed |
+                                                        framing an additional charge for the offence punishable
+                                                        Under Section 302 Indian</p>
+                                                    <div class="row">
+                                                        <div class="col-lg-3">33 Hits in this document</div>
+                                                        <div class="col-lg-4"><a href="">prev <span>Next</span></a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-2 mt-2">
+                                                        <a href="">Cited By 2</a><br>
+                                                        <a href="">cases</a>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="card">
+                                            <div class="col-lg-12 m-1">
+                                                <p class="h5"><a href="" target="_blank"
+                                                                 style="height: 30px;color: #0645AD; text-decoration: underline;">Union
+                                                    of India (UOI) Vs Maruthi Tubes (P.) Ltd.</a></p>
+                                                <p class="h6" style="color:#329300">Supreme Court of India |
+                                                    2013</p>
+                                                <p>2013 EWCA Civ 835 | 185 ILR 403</p>
+                                                <div id="sourceList">
+                                                    <p style="text-align:justify;">framing of an additional charge
+                                                        for the offence punishable Under Section 302 Indian |
+                                                        hand over further investigation to the Crime Branch or the
+                                                        CBI. The High Court dismissed |
+                                                        framing an additional charge for the offence punishable
+                                                        Under Section 302 Indian</p>
+                                                    <div class="row">
+                                                        <div class="col-lg-3">33 Hits in this document</div>
+                                                        <div class="col-lg-4"><a href="">prev <span>Next</span></a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-2 mt-2">
+                                                        <a href="">Cited By 2</a><br>
+                                                        <a href="">cases</a>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="card">
+                                            <div class="col-lg-12 m-1">
+                                                <p class="h5"><a href="" target="_blank"
+                                                                 style="height: 30px;color: #0645AD; text-decoration: underline;">Union
+                                                    of India (UOI) Vs Maruthi Tubes (P.) Ltd.</a></p>
+                                                <p class="h6" style="color:#329300">Supreme Court of India |
+                                                    2013</p>
+                                                <p>2013 EWCA Civ 835 | 185 ILR 403</p>
+                                                <div id="sourceList">
+                                                    <p style="text-align:justify;">framing of an additional charge
+                                                        for the offence punishable Under Section 302 Indian |
+                                                        hand over further investigation to the Crime Branch or the
+                                                        CBI. The High Court dismissed |
+                                                        framing an additional charge for the offence punishable
+                                                        Under Section 302 Indian</p>
+                                                    <div class="row">
+                                                        <div class="col-lg-3">33 Hits in this document</div>
+                                                        <div class="col-lg-4"><a href="">prev <span>Next</span></a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-2 mt-2">
+                                                        <a href="">Cited By 2</a><br>
+                                                        <a href="">cases</a>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="card">
+                                            <div class="col-lg-12 m-1">
+                                                <p class="h5"><a href="" target="_blank"
+                                                                 style="height: 30px;color: #0645AD; text-decoration: underline;">Union
+                                                    of India (UOI) Vs Maruthi Tubes (P.) Ltd.</a></p>
+                                                <p class="h6" style="color:#329300">Supreme Court of India |
+                                                    2013</p>
+                                                <p>2013 EWCA Civ 835 | 185 ILR 403</p>
+                                                <div id="sourceList">
+                                                    <p style="text-align:justify;">framing of an additional charge
+                                                        for the offence punishable Under Section 302 Indian |
+                                                        hand over further investigation to the Crime Branch or the
+                                                        CBI. The High Court dismissed |
+                                                        framing an additional charge for the offence punishable
+                                                        Under Section 302 Indian</p>
+                                                    <div class="row">
+                                                        <div class="col-lg-3">33 Hits in this document</div>
+                                                        <div class="col-lg-4"><a href="">prev <span>Next</span></a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-2 mt-2">
+                                                        <a href="">Cited By 2</a><br>
+                                                        <a href="">cases</a>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="card">
+                                            <div class="col-lg-12 m-1">
+                                                <p class="h5"><a href="" target="_blank"
+                                                                 style="height: 30px;color: #0645AD; text-decoration: underline;">Union
+                                                    of India (UOI) Vs Maruthi Tubes (P.) Ltd.</a></p>
+                                                <p class="h6" style="color:#329300">Supreme Court of India |
+                                                    2013</p>
+                                                <p>2013 EWCA Civ 835 | 185 ILR 403</p>
+                                                <div id="sourceList">
+                                                    <p style="text-align:justify;">framing of an additional charge
+                                                        for the offence punishable Under Section 302 Indian |
+                                                        hand over further investigation to the Crime Branch or the
+                                                        CBI. The High Court dismissed |
+                                                        framing an additional charge for the offence punishable
+                                                        Under Section 302 Indian</p>
+                                                    <div class="row">
+                                                        <div class="col-lg-3">33 Hits in this document</div>
+                                                        <div class="col-lg-4"><a href="">prev <span>Next</span></a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-2 mt-2">
+                                                        <a href="">Cited By 2</a><br>
+                                                        <a href="">cases</a>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="card">
+                                            <div class="col-lg-12 m-1">
+                                                <p class="h5"><a href="" target="_blank"
+                                                                 style="height: 30px;color: #0645AD; text-decoration: underline;">Union
+                                                    of India (UOI) Vs Maruthi Tubes (P.) Ltd.</a></p>
+                                                <p class="h6" style="color:#329300">Supreme Court of India |
+                                                    2013</p>
+                                                <p>2013 EWCA Civ 835 | 185 ILR 403</p>
+                                                <div id="sourceList">
+                                                    <p style="text-align:justify;">framing of an additional charge
+                                                        for the offence punishable Under Section 302 Indian |
+                                                        hand over further investigation to the Crime Branch or the
+                                                        CBI. The High Court dismissed |
+                                                        framing an additional charge for the offence punishable
+                                                        Under Section 302 Indian</p>
+                                                    <div class="row">
+                                                        <div class="col-lg-3">33 Hits in this document</div>
+                                                        <div class="col-lg-4"><a href="">prev <span>Next</span></a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-2 mt-2">
+                                                        <a href="">Cited By 2</a><br>
+                                                        <a href="">cases</a>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<script>$.widget.bridge('uibutton', $.ui.button)</script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/chart.js/Chart.min.js"></script>
+<script src="plugins/sparklines/sparkline.js"></script>
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="dist/js/adminlte.js"></script>
+<script src="dist/js/pages/dashboard.js"></script>
+<script src="dist/js/demo.js"></script>
+</body>
+</html>

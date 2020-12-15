@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lex Intell | Contact</title>
+    <title>Lexintell | Act Details</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -224,110 +224,63 @@
         </div>
 
         <section class="content">
-            <div class="col-lg-12" style="float:center">
-                <div class="card">
-                    <div class="card-header" style="background-color:#152c5d;">
-                        <h3 class="text-white">Bulk History</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="container-fluid" style="margin-top:20px;">
+                <div class="container-fluid" style="margin-top:20px;">
+                    <div class="row mainbody">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-12">
 
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="container">
-                                    <section class="mb-4">
-                                         <div class="col-lg-12 ">
-                                            <br>
-                                            <h3 style="margin-bottom: 50px;">Find and Replace</h3>
+                                    <div class="card">
+                                        <div class="card-body" style="overflow: hidden">
+                                            <div style="text-align: center">
+                                                 <h2><span title="The word “BENGAL” was omitted by section 3 and 2nd Schedule of the Bangladesh Laws (Revision and Declaration) Act, 1973 (Act No. VIII of 1973)."><sup style="color: blue; font-weight: bold;">1</sup></span>The Districts Act</h2>
+                                                 <h4>( ACT NO. XXI Of 1836 )</h4>
+                                                 <h6>11th September, 1836</h6>
+                                             </div>
+                                            <hr style="border:1px solid red;">
 
-                                                <form method="post" class="form-group">
-                                                    <input type="hidden" name="csrfmiddlewaretoken" value="">
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="fieldName" id="field1" value="court" checked="">
-                                                        <label class="form-check-label" for="field1">Court</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline mb-4">
-                                                        <input class="form-check-input" type="radio" name="fieldName" id="field2" value="subject">
-                                                        <label class="form-check-label" for="field2">Subject</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline mb-4">
-                                                        <input class="form-check-input" type="radio" name="fieldName" id="field3" value="search">
-                                                        <label class="form-check-label" for="field3">Search in transcript</label>
-                                                    </div>
-
-                                                    <div id="courtId" style="display: none;">
-                                                        <input type="text" id="courtInputId" name="court" class="form-control form-check-label" placeholder="Enter court name...">
-                                                    </div>
-                                                    <div id="subjectId" style="display: none;">
-                                                        <input type="text" id="subjectInputId" name="subject" class="form-control form-check-label" placeholder="Enter subject...">
-                                                    </div>
-                                                    <div id="searchId" style="">
-                                                        <input type="text" id="searchInputId" name="search" class="form-control form-check-label" placeholder="Enter search text...">
-                                                    </div>
-                                                    <button type="submit" class="btn btn-primary btn-sm mt-2">Find match</button>
-                                                </form>
-
-                                                <pre id="matchingCase">8858 cases found!</pre>
-
-
-
-                                                <div id="replaceForm" style=""></div>
-                                                <div id="modifyForm">
-
-                                                    <hr>
-                                                    <form class="mt-4">
-                                                        <p>Choose field to modify</p>
-                                                        <div class="form-check ">
-                                                            <input class="form-check-input" type="radio" name="fieldName1" id="field3" value="sources" checked=""> Source
-
-                                                        </div>
-                                                        <div class="form-check  mt-2">
-                                                            <input class="form-check-input" type="radio" name="fieldName1" id="field4" value="subject">
-                                                            <label class="form-check-label" for="field4">Subject</label>
-                                                        </div>
-                                                    </form>
-
-                                                            <div id="sourceEditId" style="display: none;">
-                                                                <form method="post" class="form-group pt-4" onsubmit="handleReplaceSubmit(event) ">
-                                                                    <input type="hidden" name="csrfmiddlewaretoken">
-                                                                    <input type="hidden" class="form-control" id="fieldId" name="field" value="search">
-                                                                    <input type="hidden" class="form-control" id="fieldToModifyId" name="fieldToModify" value="sources">
-                                                                    <input type="hidden" class="form-control" id="valueId" name="value" value="test">
-                                                                    <input type="text" class="form-control" id="addedSourceText" name="addedText_" placeholder="Enter value to add with existing sources..." required="">
-                                                                    <button type="submit" class="btn btn-primary btn-sm mt-2">Modify case source</button>
-                                                                </form>
-                                                            </div>
-
-                                                            <div id="subjectEditId" style="">
-                                                                <form method="post" class="form-group pt-4" onsubmit="handleReplaceSubmit(event) ">
-                                                                    <input type="hidden" name="csrfmiddlewaretoken">
-                                                                    <input type="hidden" class="form-control" id="fieldId" name="field" value="search">
-                                                                    <input type="hidden" class="form-control" id="fieldToModifyId" name="fieldToModify" value="subject">
-                                                                    <input type="hidden" class="form-control" id="valueId" name="value" value="test">
-                                                                    <input type="text" class="form-control" id="addedSubjectText" name="addedSubjectText_" placeholder="Enter value to add with existing subject..." required="">
-                                                                    <button type="submit" class="btn btn-primary btn-sm mt-2">Modify case subject</button>
-                                                                </form>
-                                                            </div>
+                                            <div>
+                                                <p class="h5"><span style="color:blue;"> <a href="" target="_blank">Cited By 28</a></span></p>
+                                            </div>
+                                                <div class="mb-2">
+                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#typeModal">Edit legislation type</button>
+                                                    <a href="" class="btn float-right btn-info">View Full Act</a>
                                                 </div>
-                                                <div class="mt-5 text-center" id="process"></div>
 
 
-                                            <br>
+
+
+                                            <table class="table table-bordered">
+                                                <thead class="bg-primary">
+                                                    <tr>
+                                                        <th style="text-align:center;">Section</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="actListTable">
+                                                        <tr>
+
+                                                                <td>1. <a class="blue" href="" target="_blank">Power to create new Districts</a></td>
+
+
+                                                        </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
-                                    </section>
+                                    </div>
+                                    <hr>
+                                    <div class="container">
+                                        <p style="text-align:justify;"> <sup>1</sup> The word “BENGAL” was omitted by section 3 and 2nd Schedule of the Bangladesh
+                                        Laws (Revision and Declaration) Act, 1973 (Act No. VIII of 1973). </p>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                    </div>
-
                 </div>
-            </div>
-
         </section>
 
     </div>
-
     <aside class="control-sidebar control-sidebar-dark">
     </aside>
 </div>
