@@ -17,1344 +17,1342 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
-    <section class="content" >
-        <div class="card" >
-            <div class="container-fluid" style="margin-top:20px;">
+<div class="wrapper" >
+    <section class="content" style="height:100%;">
+            <div class="container-fluid" >
                 <div class="col-md-12">
-                        <div class="test mb-4 text-center" style="border-radius:5px;background-color:#152c5b;">
-                            <h3 style="color:#fff;">Search Result</h3>
-                        </div>
-                        <input id="uriId"
-                               value="https://legislib.com/case/advance-case-search/?csrfmiddlewaretoken=4MDcNlIdxcmXsRD79sWe46ZElQXAlKqL4c5xwuOTAtpn8qx13xX2KfSHXDNKVGWy&amp;dashboard=dashboard&amp;text=a&amp;suggestion_type=&amp;box_type=abstract&amp;by=abstract"
-                               class="sr-only">
+                    <div class="test mb-4 text-center" style="border-radius:5px;background-color:#152c5b;">
+                        <h3 style="color:#fff;">Search Result</h3>
+                    </div>
 
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="overflow-auto col-lg-12 p-3 bg-light" style="max-height: 550px;position:absolute;">
-                                    <div class="card">
-                                        <div class="card-header" style="background-color:#152c5d;">
-                                            <h3 style="color:#fff;">Filters</h3>
-                                        </div>
-                                        <div class="card-body">
-
-
-
-                                                <div class="row">
-                                                    <div class="form-group mx-sm-3 mb-2">
-                                                            <div class="input-group md-form form-sm form-2 pl-0">
-                                                              <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search">
-                                                              <div class="input-group-append">
-                                                                <span class="input-group-text bg-info amber lighten-3" id="basic-text1"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
-                                                              </div>
-                                                            </div>
-                                                        </div>
-                                                </div>
-
-                                            <br>
-                                            <span style="display:inline-block;">Select Multiple</span>
-                                            <label class="switch" style="display:inline-block;">
-                                                <input type="checkbox" id="multipleSelectId"
-                                                       onclick="selectMultiple(this)"><span
-                                                    id="slidebutton" class="slider round"></span>
-                                            </label>
-                                            <br>
-                                            <button class="btn btn-info btn-sm display-none" id="applybutton"
-                                                    style="background: #2196F3; color: white" type="button"
-                                                    onclick="submitForm()">Apply
-                                            </button>
-
-
-                                        </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="overflow-auto col-lg-12 bg-light" id="left_height" style="position:sticky;top:40px;">
+                                <div class="card">
+                                    <div class="card-header" style="background-color:#152c5d;">
+                                        <h3 style="color:#fff;">Filters</h3>
                                     </div>
-                                    <div class="card" style="margin-top: 30px;">
-                                        <div class="card-header" style="background-color:#152c5d;">
-                                            <p class="mb-0 text-white">Content Type </p>
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+                                            <div class="form-group mx-sm-3 mb-2">
+                                                <div class="input-group md-form form-sm form-2 pl-0">
+                                                    <input class="form-control my-0 py-1 amber-border" type="text"
+                                                           placeholder="Search" aria-label="Search">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text bg-info amber lighten-3"
+                                                              id="basic-text1"><i class="fas fa-search text-grey"
+                                                                                  aria-hidden="true"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="card-body">
 
-                                            <div id="contentTypeList">
+                                        <br>
+                                        <span style="display:inline-block;">Select Multiple</span>
+                                        <label class="switch" style="display:inline-block;">
+                                            <input type="checkbox" id="multipleSelectId"
+                                                   onclick="selectMultiple(this)"><span
+                                                id="slidebutton" class="slider round"></span>
+                                        </label>
+                                        <br>
+                                        <button class="btn btn-info btn-sm display-none" id="applybutton"
+                                                style="background: #2196F3; color: white" type="button"
+                                                onclick="submitForm()">Apply
+                                        </button>
 
-                                                <input type="radio" name="contentX" value="" class="form-check-label"
-                                                       onclick="addContentFilter(this) " checked="">
-                                                <small>All</small>
 
-                                                <span id="allCount" style="float: right;">
+                                    </div>
+                                </div>
+                                <div class="card" style="margin-top: 30px;">
+                                    <div class="card-header" style="background-color:#152c5d;">
+                                        <p class="mb-0 text-white">Content Type </p>
+                                    </div>
+                                    <div class="card-body">
+
+                                        <div id="contentTypeList">
+
+                                            <input type="radio" name="contentX" value="" class="form-check-label"
+                                                   onclick="addContentFilter(this) " checked="">
+                                            <small>All</small>
+
+                                            <span id="allCount" style="float: right;">
                                     64794
                                 </span>
-                                                <br>
+                                            <br>
 
-                                                <input type="radio" name="contentX" value="case"
-                                                       class="form-check-label" onclick="addContentFilter(this)">
-                                                <small>Case</small>
+                                            <input type="radio" name="contentX" value="case"
+                                                   class="form-check-label" onclick="addContentFilter(this)">
+                                            <small>Case</small>
 
-                                                <span id="caseCount" style="float: right;">
+                                            <span id="caseCount" style="float: right;">
                                     61943
                                 </span>
-                                                <br>
+                                            <br>
 
-                                                <input type="radio" name="contentX" value="legislation"
-                                                       class="form-check-label" onclick="addContentFilter(this)">
-                                                <small>Legislation</small>
+                                            <input type="radio" name="contentX" value="legislation"
+                                                   class="form-check-label" onclick="addContentFilter(this)">
+                                            <small>Legislation</small>
 
-                                                <span id="legislationCount" style="float: right;">
+                                            <span id="legislationCount" style="float: right;">
                                     2851
                                 </span>
 
 
-                                            </div>
                                         </div>
                                     </div>
-                                    <div class="card" style="margin-top: 30px;">
-                                        <div class="card-header" style="background-color:#152c5d;">
-                                            <p class="mb-0 text-white">Topic</p>
-                                        </div>
-                                        <div class="card-body">
+                                </div>
+                                <div class="card" style="margin-top: 30px;">
+                                    <div class="card-header" style="background-color:#152c5d;">
+                                        <p class="mb-0 text-white">Topic</p>
+                                    </div>
+                                    <div class="card-body">
 
-                                            <div id="topicList">
-
-
-
-                                                <a type="button" class="collapsible"><span
-                                                        style="float: left; margin-left: 13px;"></span></a>
-                                                <a style="font-size: 14px; cursor: pointer;" data-toggle="collapse"
-                                                   data-target="#subSubject2" role="button">
-                                                    <i class="fa fa-plus-square"></i>
-                                                </a>
+                                        <div id="topicList">
 
 
-                                                <input type="checkbox" value="Penal Code 1860" class="form-check-label"
-                                                       onclick="addSubjectFilter(this)">
-                                                <small>Penal Code 1860</small>
+                                            <a type="button" class="collapsible"><span
+                                                    style="float: left; margin-left: 13px;"></span></a>
+                                            <a style="font-size: 14px; cursor: pointer;" data-toggle="collapse"
+                                               data-target="#subSubject2" role="button">
+                                                <i class="fa fa-plus-square"></i>
+                                            </a>
 
 
-                                                <span style="float: right;">3703</span>
+                                            <input type="checkbox" value="Penal Code 1860" class="form-check-label"
+                                                   onclick="addSubjectFilter(this)">
+                                            <small>Penal Code 1860</small>
 
+
+                                            <span style="float: right;">3703</span>
+
+                                            <br>
+
+                                            <div class="collapse multi-collapse" style="padding-left: 40px;"
+                                                 id="subSubject2">
+
+                                                <input type="checkbox" class="form-check-label" value="Section 302"
+                                                       data-subject="Penal Code 1860"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 302 :
+                                                    <b>3702</b></small>
                                                 <br>
 
-                                                <div class="collapse multi-collapse" style="padding-left: 40px;"
-                                                     id="subSubject2">
-
-                                                    <input type="checkbox" class="form-check-label" value="Section 302"
-                                                           data-subject="Penal Code 1860"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 302 :
-                                                        <b>3702</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Section 34"
-                                                           data-subject="Penal Code 1860"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 34 :
-                                                        <b>18</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Section 109"
-                                                           data-subject="Penal Code 1860"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 109 :
-                                                        <b>5</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Section 364"
-                                                           data-subject="Penal Code 1860"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 364 :
-                                                        <b>5</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Section 324"
-                                                           data-subject="Penal Code 1860"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 324 :
-                                                        <b>3</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Section 201"
-                                                           data-subject="Penal Code 1860"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 201 :
-                                                        <b>2</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Section 326"
-                                                           data-subject="Penal Code 1860"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 326 :
-                                                        <b>2</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Section 380"
-                                                           data-subject="Penal Code 1860"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 380 :
-                                                        <b>2</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Section 436"
-                                                           data-subject="Penal Code 1860"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 436 :
-                                                        <b>2</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="1898&shy;"
-                                                           data-subject="Penal Code 1860"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">1898&shy; :
-                                                        <b>1</b></small>
-                                                    <br>
-
-                                                </div>
-
-
-                                                <a type="button" class="collapsible">
-                                                    <span style="float: left; margin-left: 13px;"></span></a>
-                                                <a style="font-size: 14px; cursor: pointer;" data-toggle="collapse"
-                                                   data-target="#subSubject3" role="button">
-                                                    <i class="fa fa-plus-square"></i>
-                                                </a>
-
-
-                                                <input type="checkbox"
-                                                       value="Constitution Of The People's Republic Of Bangladesh"
-                                                       class="form-check-label" onclick="addSubjectFilter(this)">
-                                                <small>Constitution Of The People's Republic Of Bangladesh</small>
-
-
-                                                <span style="float: right;">2366</span>
-
+                                                <input type="checkbox" class="form-check-label" value="Section 34"
+                                                       data-subject="Penal Code 1860"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 34 :
+                                                    <b>18</b></small>
                                                 <br>
 
-                                                <div class="collapse multi-collapse" style="padding-left: 40px;"
-                                                     id="subSubject3">
+                                                <input type="checkbox" class="form-check-label" value="Section 109"
+                                                       data-subject="Penal Code 1860"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 109 :
+                                                    <b>5</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Article 102"
-                                                           data-subject="Constitution Of The People's Republic Of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Article 102 :
-                                                        <b>2067</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 364"
+                                                       data-subject="Penal Code 1860"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 364 :
+                                                    <b>5</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Article 31"
-                                                           data-subject="Constitution Of The People's Republic Of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Article 31 :
-                                                        <b>124</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 324"
+                                                       data-subject="Penal Code 1860"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 324 :
+                                                    <b>3</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Article 27"
-                                                           data-subject="Constitution Of The People's Republic Of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Article 27 :
-                                                        <b>119</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 201"
+                                                       data-subject="Penal Code 1860"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 201 :
+                                                    <b>2</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Article 102(2)"
-                                                           data-subject="Constitution Of The People's Republic Of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Article 102(2) :
-                                                        <b>68</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 326"
+                                                       data-subject="Penal Code 1860"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 326 :
+                                                    <b>2</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Article 29"
-                                                           data-subject="Constitution Of The People's Republic Of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Article 29 :
-                                                        <b>62</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 380"
+                                                       data-subject="Penal Code 1860"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 380 :
+                                                    <b>2</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Article 103"
-                                                           data-subject="Constitution Of The People's Republic Of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Article 103 :
-                                                        <b>51</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 436"
+                                                       data-subject="Penal Code 1860"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 436 :
+                                                    <b>2</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Article 32"
-                                                           data-subject="Constitution Of The People's Republic Of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Article 32 :
-                                                        <b>43</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="1898&shy;"
+                                                       data-subject="Penal Code 1860"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">1898&shy; :
+                                                    <b>1</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Article 152"
-                                                           data-subject="Constitution Of The People's Republic Of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Article 152 :
-                                                        <b>39</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Article 133"
-                                                           data-subject="Constitution Of The People's Republic Of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Article 133 :
-                                                        <b>37</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Article 135"
-                                                           data-subject="Constitution Of The People's Republic Of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Article 135 :
-                                                        <b>35</b></small>
-                                                    <br>
-
-                                                </div>
+                                            </div>
 
 
-                                                <a type="button" class="collapsible"><span
-                                                        style="float: left; margin-left: 13px;">
+                                            <a type="button" class="collapsible">
+                                                <span style="float: left; margin-left: 13px;"></span></a>
+                                            <a style="font-size: 14px; cursor: pointer;" data-toggle="collapse"
+                                               data-target="#subSubject3" role="button">
+                                                <i class="fa fa-plus-square"></i>
+                                            </a>
+
+
+                                            <input type="checkbox"
+                                                   value="Constitution Of The People's Republic Of Bangladesh"
+                                                   class="form-check-label" onclick="addSubjectFilter(this)">
+                                            <small>Constitution Of The People's Republic Of Bangladesh</small>
+
+
+                                            <span style="float: right;">2366</span>
+
+                                            <br>
+
+                                            <div class="collapse multi-collapse" style="padding-left: 40px;"
+                                                 id="subSubject3">
+
+                                                <input type="checkbox" class="form-check-label" value="Article 102"
+                                                       data-subject="Constitution Of The People's Republic Of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Article 102 :
+                                                    <b>2067</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label" value="Article 31"
+                                                       data-subject="Constitution Of The People's Republic Of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Article 31 :
+                                                    <b>124</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label" value="Article 27"
+                                                       data-subject="Constitution Of The People's Republic Of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Article 27 :
+                                                    <b>119</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Article 102(2)"
+                                                       data-subject="Constitution Of The People's Republic Of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Article 102(2) :
+                                                    <b>68</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label" value="Article 29"
+                                                       data-subject="Constitution Of The People's Republic Of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Article 29 :
+                                                    <b>62</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label" value="Article 103"
+                                                       data-subject="Constitution Of The People's Republic Of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Article 103 :
+                                                    <b>51</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label" value="Article 32"
+                                                       data-subject="Constitution Of The People's Republic Of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Article 32 :
+                                                    <b>43</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label" value="Article 152"
+                                                       data-subject="Constitution Of The People's Republic Of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Article 152 :
+                                                    <b>39</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label" value="Article 133"
+                                                       data-subject="Constitution Of The People's Republic Of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Article 133 :
+                                                    <b>37</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label" value="Article 135"
+                                                       data-subject="Constitution Of The People's Republic Of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Article 135 :
+                                                    <b>35</b></small>
+                                                <br>
+
+                                            </div>
+
+
+                                            <a type="button" class="collapsible"><span
+                                                    style="float: left; margin-left: 13px;">
                                                 </span></a>
-                                                <a style="font-size: 14px; cursor: pointer;" data-toggle="collapse"
-                                                   data-target="#subSubject4" role="button">
-                                                    <i class="fa fa-plus-square" aria-hidden="true"></i>
-                                                </a>
+                                            <a style="font-size: 14px; cursor: pointer;" data-toggle="collapse"
+                                               data-target="#subSubject4" role="button">
+                                                <i class="fa fa-plus-square" aria-hidden="true"></i>
+                                            </a>
 
 
-                                                <input type="checkbox" value="Constitution of Bangladesh"
-                                                       class="form-check-label" onclick="addSubjectFilter(this)">
-                                                <small>Constitution of Bangladesh</small>
+                                            <input type="checkbox" value="Constitution of Bangladesh"
+                                                   class="form-check-label" onclick="addSubjectFilter(this)">
+                                            <small>Constitution of Bangladesh</small>
 
 
-                                                <span style="float: right;">2084</span>
+                                            <span style="float: right;">2084</span>
 
+                                            <br>
+
+                                            <div class="collapse multi-collapse" style="padding-left: 40px;"
+                                                 id="subSubject4">
+
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Powers of High Court Division to issue certain orders and directions, etc"
+                                                       data-subject="Constitution of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Powers of High Court Division to
+                                                    issue certain orders and directions, etc :
+                                                    <b>1194</b></small>
                                                 <br>
 
-                                                <div class="collapse multi-collapse" style="padding-left: 40px;"
-                                                     id="subSubject4">
-
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Powers of High Court Division to issue certain orders and directions, etc"
-                                                           data-subject="Constitution of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Powers of High Court Division to
-                                                        issue certain orders and directions, etc :
-                                                        <b>1194</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Powers of High Court Division to issue certain orders and directions"
-                                                           data-subject="Constitution of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Powers of High Court Division to
-                                                        issue certain orders and directions :
-                                                        <b>888</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="etc"
-                                                           data-subject="Constitution of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">etc :
-                                                        <b>886</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="1885"
-                                                           data-subject="Constitution of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">1885 :
-                                                        <b>1</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="1897"
-                                                           data-subject="Constitution of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">1897 :
-                                                        <b>1</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="1908"
-                                                           data-subject="Constitution of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">1908 :
-                                                        <b>1</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Article 27"
-                                                           data-subject="Constitution of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Article 27 :
-                                                        <b>1</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Article 31"
-                                                           data-subject="Constitution of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Article 31 :
-                                                        <b>1</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Article 40"
-                                                           data-subject="Constitution of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Article 40 :
-                                                        <b>1</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Article 42"
-                                                           data-subject="Constitution of Bangladesh"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Article 42 :
-                                                        <b>1</b></small>
-                                                    <br>
-
-                                                </div>
-
-
-                                                <a type="button" class="collapsible"><span
-                                                        style="float: left; margin-left: 13px;"></span></a>
-                                                <a style="font-size: 14px; cursor: pointer;"
-                                                   data-toggle="collapse" data-target="#subSubject5"
-                                                   role="button">
-                                                    <i class="fa fa-plus-square" aria-hidden="true"></i>
-                                                </a>
-
-
-                                                <input type="checkbox" value="Criminal Law" class="form-check-label"
-                                                       onclick="addSubjectFilter(this)">
-                                                <small>Criminal Law</small>
-
-
-                                                <span style="float: right;">1944</span>
-
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Powers of High Court Division to issue certain orders and directions"
+                                                       data-subject="Constitution of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Powers of High Court Division to
+                                                    issue certain orders and directions :
+                                                    <b>888</b></small>
                                                 <br>
 
-                                                <div class="collapse multi-collapse" style="padding-left: 40px;"
-                                                     id="subSubject5">
+                                                <input type="checkbox" class="form-check-label" value="etc"
+                                                       data-subject="Constitution of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">etc :
+                                                    <b>886</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Common Intention" data-subject="Criminal Law"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Common Intention :
-                                                        <b>1931</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="1885"
+                                                       data-subject="Constitution of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">1885 :
+                                                    <b>1</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Acts done by several persons in furtherance of common intention"
-                                                           data-subject="Criminal Law"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Acts done by several persons in
-                                                        furtherance of common intention :
-                                                        <b>5</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="1897"
+                                                       data-subject="Constitution of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">1897 :
+                                                    <b>1</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Punishment for murder" data-subject="Criminal Law"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Punishment for murder :
-                                                        <b>4</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="1908"
+                                                       data-subject="Constitution of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">1908 :
+                                                    <b>1</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Murder"
-                                                           data-subject="Criminal Law"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Murder :
-                                                        <b>3</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Article 27"
+                                                       data-subject="Constitution of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Article 27 :
+                                                    <b>1</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Causing disappearance of evidence of offence"
-                                                           data-subject="Criminal Law"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Causing disappearance of evidence of
-                                                        offence :
-                                                        <b>2</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Article 31"
+                                                       data-subject="Constitution of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Article 31 :
+                                                    <b>1</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Cheating"
-                                                           data-subject="Criminal Law"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Cheating :
-                                                        <b>2</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Article 40"
+                                                       data-subject="Constitution of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Article 40 :
+                                                    <b>1</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Giving false information to screen offender"
-                                                           data-subject="Criminal Law"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Giving false information to screen
-                                                        offender :
-                                                        <b>2</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Article 42"
+                                                       data-subject="Constitution of Bangladesh"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Article 42 :
+                                                    <b>1</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Joint Enterprise" data-subject="Criminal Law"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Joint Enterprise :
-                                                        <b>2</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Offences Against Property" data-subject="Criminal Law"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Offences Against Property :
-                                                        <b>2</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Punishment for theft" data-subject="Criminal Law"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Punishment for theft :
-                                                        <b>2</b></small>
-                                                    <br>
-
-                                                </div>
+                                            </div>
 
 
-                                                <a type="button" class="collapsible"><span
-                                                        style="float: left; margin-left: 13px;"></span></a>
-                                                <a style="font-size: 14px; cursor: pointer;"
-                                                   data-toggle="collapse" data-target="#subSubject6"
-                                                   role="button">
-                                                    <i class="fa fa-plus-square" aria-hidden="true"></i>
-                                                </a>
+                                            <a type="button" class="collapsible"><span
+                                                    style="float: left; margin-left: 13px;"></span></a>
+                                            <a style="font-size: 14px; cursor: pointer;"
+                                               data-toggle="collapse" data-target="#subSubject5"
+                                               role="button">
+                                                <i class="fa fa-plus-square" aria-hidden="true"></i>
+                                            </a>
 
 
-                                                <input type="checkbox" value="Civil Procedure" class="form-check-label"
-                                                       onclick="addSubjectFilter(this)">
-                                                <small>Civil Procedure</small>
+                                            <input type="checkbox" value="Criminal Law" class="form-check-label"
+                                                   onclick="addSubjectFilter(this)">
+                                            <small>Criminal Law</small>
 
 
-                                                <span style="float: right;">
+                                            <span style="float: right;">1944</span>
+
+                                            <br>
+
+                                            <div class="collapse multi-collapse" style="padding-left: 40px;"
+                                                 id="subSubject5">
+
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Common Intention" data-subject="Criminal Law"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Common Intention :
+                                                    <b>1931</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Acts done by several persons in furtherance of common intention"
+                                                       data-subject="Criminal Law"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Acts done by several persons in
+                                                    furtherance of common intention :
+                                                    <b>5</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Punishment for murder" data-subject="Criminal Law"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Punishment for murder :
+                                                    <b>4</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label" value="Murder"
+                                                       data-subject="Criminal Law"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Murder :
+                                                    <b>3</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Causing disappearance of evidence of offence"
+                                                       data-subject="Criminal Law"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Causing disappearance of evidence of
+                                                    offence :
+                                                    <b>2</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label" value="Cheating"
+                                                       data-subject="Criminal Law"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Cheating :
+                                                    <b>2</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Giving false information to screen offender"
+                                                       data-subject="Criminal Law"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Giving false information to screen
+                                                    offender :
+                                                    <b>2</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Joint Enterprise" data-subject="Criminal Law"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Joint Enterprise :
+                                                    <b>2</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Offences Against Property" data-subject="Criminal Law"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Offences Against Property :
+                                                    <b>2</b></small>
+                                                <br>
+
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Punishment for theft" data-subject="Criminal Law"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Punishment for theft :
+                                                    <b>2</b></small>
+                                                <br>
+
+                                            </div>
+
+
+                                            <a type="button" class="collapsible"><span
+                                                    style="float: left; margin-left: 13px;"></span></a>
+                                            <a style="font-size: 14px; cursor: pointer;"
+                                               data-toggle="collapse" data-target="#subSubject6"
+                                               role="button">
+                                                <i class="fa fa-plus-square" aria-hidden="true"></i>
+                                            </a>
+
+
+                                            <input type="checkbox" value="Civil Procedure" class="form-check-label"
+                                                   onclick="addSubjectFilter(this)">
+                                            <small>Civil Procedure</small>
+
+
+                                            <span style="float: right;">
                                          1668
                                     </span>
 
+                                            <br>
+
+                                            <div class="collapse multi-collapse" style="padding-left: 40px;"
+                                                 id="subSubject6">
+
+                                                <input type="checkbox" class="form-check-label" value="Res Judicata"
+                                                       data-subject="Civil Procedure"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Res Judicata :
+                                                    <b>1629</b></small>
                                                 <br>
 
-                                                <div class="collapse multi-collapse" style="padding-left: 40px;"
-                                                     id="subSubject6">
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Misjoinder and Non Joinder"
+                                                       data-subject="Civil Procedure"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Misjoinder and Non Joinder :
+                                                    <b>5</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Res Judicata"
-                                                           data-subject="Civil Procedure"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Res Judicata :
-                                                        <b>1629</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Inherent powers of Court"
+                                                       data-subject="Civil Procedure"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Inherent powers of Court :
+                                                    <b>4</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Misjoinder and Non Joinder"
-                                                           data-subject="Civil Procedure"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Misjoinder and Non Joinder :
-                                                        <b>5</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Rejection of Plaint" data-subject="Civil Procedure"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Rejection of Plaint :
+                                                    <b>3</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Inherent powers of Court"
-                                                           data-subject="Civil Procedure"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Inherent powers of Court :
-                                                        <b>4</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Appearance of Parties &amp; Consequence of Non-Appearance"
+                                                       data-subject="Civil Procedure"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Appearance of Parties &amp;
+                                                    Consequence of Non-Appearance :
+                                                    <b>2</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Rejection of Plaint" data-subject="Civil Procedure"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Rejection of Plaint :
-                                                        <b>3</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Death"
+                                                       data-subject="Civil Procedure"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Death :
+                                                    <b>2</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Appearance of Parties &amp; Consequence of Non-Appearance"
-                                                           data-subject="Civil Procedure"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Appearance of Parties &amp;
-                                                        Consequence of Non-Appearance :
-                                                        <b>2</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Parties to Suites" data-subject="Civil Procedure"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Parties to Suites :
+                                                    <b>2</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Death"
-                                                           data-subject="Civil Procedure"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Death :
-                                                        <b>2</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Procedure in case of assignment before final order in suit"
+                                                       data-subject="Civil Procedure"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Procedure in case of assignment
+                                                    before final order in suit :
+                                                    <b>2</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Parties to Suites" data-subject="Civil Procedure"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Parties to Suites :
-                                                        <b>2</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Revision"
+                                                       data-subject="Civil Procedure"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Revision :
+                                                    <b>2</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Procedure in case of assignment before final order in suit"
-                                                           data-subject="Civil Procedure"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Procedure in case of assignment
-                                                        before final order in suit :
-                                                        <b>2</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Summons"
+                                                       data-subject="Civil Procedure"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Summons :
+                                                    <b>2</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Revision"
-                                                           data-subject="Civil Procedure"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Revision :
-                                                        <b>2</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Summons"
-                                                           data-subject="Civil Procedure"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Summons :
-                                                        <b>2</b></small>
-                                                    <br>
-
-                                                </div>
+                                            </div>
 
 
-                                                <a type="button" class="collapsible">
+                                            <a type="button" class="collapsible">
                                     <span style="float: left; margin-left: 13px;">
 
                                             </span></a><a style="font-size: 14px; cursor: pointer;"
                                                           data-toggle="collapse" data-target="#subSubject7"
                                                           role="button">
-                                                <i class="fa fa-plus-square" aria-hidden="true"></i>
-                                            </a>
+                                            <i class="fa fa-plus-square" aria-hidden="true"></i>
+                                        </a>
 
 
-                                                <input type="checkbox" value="Code of Civil Procedure, 1908"
-                                                       class="form-check-label" onclick="addSubjectFilter(this)">
-                                                <small>Code of Civil Procedure, 1908</small>
+                                            <input type="checkbox" value="Code of Civil Procedure, 1908"
+                                                   class="form-check-label" onclick="addSubjectFilter(this)">
+                                            <small>Code of Civil Procedure, 1908</small>
 
 
-                                                <span style="float: right;">
+                                            <span style="float: right;">
                                          1326
                                     </span>
 
+                                            <br>
+
+                                            <div class="collapse multi-collapse" style="padding-left: 40px;"
+                                                 id="subSubject7">
+
+                                                <input type="checkbox" class="form-check-label" value="Section 151"
+                                                       data-subject="Code of Civil Procedure, 1908"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 151 :
+                                                    <b>261</b></small>
                                                 <br>
 
-                                                <div class="collapse multi-collapse" style="padding-left: 40px;"
-                                                     id="subSubject7">
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Section 115(1)"
+                                                       data-subject="Code of Civil Procedure, 1908"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 115(1) :
+                                                    <b>251</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 151"
-                                                           data-subject="Code of Civil Procedure, 1908"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 151 :
-                                                        <b>261</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 115"
+                                                       data-subject="Code of Civil Procedure, 1908"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 115 :
+                                                    <b>248</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Section 115(1)"
-                                                           data-subject="Code of Civil Procedure, 1908"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 115(1) :
-                                                        <b>251</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Order VII Rule 11"
+                                                       data-subject="Code of Civil Procedure, 1908"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Order VII Rule 11 :
+                                                    <b>90</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 115"
-                                                           data-subject="Code of Civil Procedure, 1908"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 115 :
-                                                        <b>248</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Order 7 Rule 11"
+                                                       data-subject="Code of Civil Procedure, 1908"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Order 7 Rule 11 :
+                                                    <b>89</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Order VII Rule 11"
-                                                           data-subject="Code of Civil Procedure, 1908"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Order VII Rule 11 :
-                                                        <b>90</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Order IX Rule 13"
+                                                       data-subject="Code of Civil Procedure, 1908"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Order IX Rule 13 :
+                                                    <b>89</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Order 7 Rule 11"
-                                                           data-subject="Code of Civil Procedure, 1908"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Order 7 Rule 11 :
-                                                        <b>89</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Order 9 Rule 13"
+                                                       data-subject="Code of Civil Procedure, 1908"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Order 9 Rule 13 :
+                                                    <b>82</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Order IX Rule 13"
-                                                           data-subject="Code of Civil Procedure, 1908"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Order IX Rule 13 :
-                                                        <b>89</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Order XXXIX Rule 1"
+                                                       data-subject="Code of Civil Procedure, 1908"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Order XXXIX Rule 1 :
+                                                    <b>59</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Order 9 Rule 13"
-                                                           data-subject="Code of Civil Procedure, 1908"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Order 9 Rule 13 :
-                                                        <b>82</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="Order 39 Rule 1"
+                                                       data-subject="Code of Civil Procedure, 1908"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Order 39 Rule 1 :
+                                                    <b>56</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Order XXXIX Rule 1"
-                                                           data-subject="Code of Civil Procedure, 1908"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Order XXXIX Rule 1 :
-                                                        <b>59</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 9"
+                                                       data-subject="Code of Civil Procedure, 1908"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 9 :
+                                                    <b>53</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="Order 39 Rule 1"
-                                                           data-subject="Code of Civil Procedure, 1908"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Order 39 Rule 1 :
-                                                        <b>56</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Section 9"
-                                                           data-subject="Code of Civil Procedure, 1908"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 9 :
-                                                        <b>53</b></small>
-                                                    <br>
-
-                                                </div>
+                                            </div>
 
 
-                                                <a type="button" class="collapsible">
+                                            <a type="button" class="collapsible">
                                     <span style="float: left; margin-left: 13px;">
 
                                             </span></a><a style="font-size: 14px; cursor: pointer;"
                                                           data-toggle="collapse" data-target="#subSubject8"
                                                           role="button">
-                                                <i class="fa fa-plus-square" aria-hidden="true"></i>
-                                            </a>
+                                            <i class="fa fa-plus-square" aria-hidden="true"></i>
+                                        </a>
 
 
-                                                <input type="checkbox" value="Code of Criminal Procedure, 1898"
-                                                       class="form-check-label" onclick="addSubjectFilter(this)">
-                                                <small>Code of Criminal Procedure, 1898</small>
+                                            <input type="checkbox" value="Code of Criminal Procedure, 1898"
+                                                   class="form-check-label" onclick="addSubjectFilter(this)">
+                                            <small>Code of Criminal Procedure, 1898</small>
 
 
-                                                <span style="float: right;">
+                                            <span style="float: right;">
                                          1321
                                     </span>
 
+                                            <br>
+
+                                            <div class="collapse multi-collapse" style="padding-left: 40px;"
+                                                 id="subSubject8">
+
+                                                <input type="checkbox" class="form-check-label" value="Section 561A"
+                                                       data-subject="Code of Criminal Procedure, 1898"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 561A :
+                                                    <b>417</b></small>
                                                 <br>
 
-                                                <div class="collapse multi-collapse" style="padding-left: 40px;"
-                                                     id="subSubject8">
+                                                <input type="checkbox" class="form-check-label" value="Section 342"
+                                                       data-subject="Code of Criminal Procedure, 1898"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 342 :
+                                                    <b>200</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 561A"
-                                                           data-subject="Code of Criminal Procedure, 1898"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 561A :
-                                                        <b>417</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 161"
+                                                       data-subject="Code of Criminal Procedure, 1898"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 161 :
+                                                    <b>178</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 342"
-                                                           data-subject="Code of Criminal Procedure, 1898"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 342 :
-                                                        <b>200</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 164"
+                                                       data-subject="Code of Criminal Procedure, 1898"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 164 :
+                                                    <b>158</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 161"
-                                                           data-subject="Code of Criminal Procedure, 1898"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 161 :
-                                                        <b>178</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 439"
+                                                       data-subject="Code of Criminal Procedure, 1898"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 439 :
+                                                    <b>115</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 164"
-                                                           data-subject="Code of Criminal Procedure, 1898"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 164 :
-                                                        <b>158</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 374"
+                                                       data-subject="Code of Criminal Procedure, 1898"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 374 :
+                                                    <b>108</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 439"
-                                                           data-subject="Code of Criminal Procedure, 1898"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 439 :
-                                                        <b>115</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 200"
+                                                       data-subject="Code of Criminal Procedure, 1898"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 200 :
+                                                    <b>88</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 374"
-                                                           data-subject="Code of Criminal Procedure, 1898"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 374 :
-                                                        <b>108</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 435"
+                                                       data-subject="Code of Criminal Procedure, 1898"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 435 :
+                                                    <b>76</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 200"
-                                                           data-subject="Code of Criminal Procedure, 1898"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 200 :
-                                                        <b>88</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 265C"
+                                                       data-subject="Code of Criminal Procedure, 1898"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 265C :
+                                                    <b>69</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 435"
-                                                           data-subject="Code of Criminal Procedure, 1898"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 435 :
-                                                        <b>76</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 241A"
+                                                       data-subject="Code of Criminal Procedure, 1898"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 241A :
+                                                    <b>59</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 265C"
-                                                           data-subject="Code of Criminal Procedure, 1898"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 265C :
-                                                        <b>69</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Section 241A"
-                                                           data-subject="Code of Criminal Procedure, 1898"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 241A :
-                                                        <b>59</b></small>
-                                                    <br>
-
-                                                </div>
+                                            </div>
 
 
-                                                <a type="button" class="collapsible">
+                                            <a type="button" class="collapsible">
                                     <span style="float: left; margin-left: 13px;">
 
                                             </span></a><a style="font-size: 14px; cursor: pointer;"
                                                           data-toggle="collapse" data-target="#subSubject9"
                                                           role="button">
-                                                <i class="fa fa-plus-square" aria-hidden="true"></i>
-                                            </a>
+                                            <i class="fa fa-plus-square" aria-hidden="true"></i>
+                                        </a>
 
 
-                                                <input type="checkbox" value="Evidence Act, 1872"
-                                                       class="form-check-label" onclick="addSubjectFilter(this)">
-                                                <small>Evidence Act, 1872</small>
+                                            <input type="checkbox" value="Evidence Act, 1872"
+                                                   class="form-check-label" onclick="addSubjectFilter(this)">
+                                            <small>Evidence Act, 1872</small>
 
 
-                                                <span style="float: right;">
+                                            <span style="float: right;">
                                          686
                                     </span>
 
+                                            <br>
+
+                                            <div class="collapse multi-collapse" style="padding-left: 40px;"
+                                                 id="subSubject9">
+
+                                                <input type="checkbox" class="form-check-label" value="Section 29"
+                                                       data-subject="Evidence Act, 1872"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 29 :
+                                                    <b>365</b></small>
                                                 <br>
 
-                                                <div class="collapse multi-collapse" style="padding-left: 40px;"
-                                                     id="subSubject9">
+                                                <input type="checkbox" class="form-check-label" value="Section 30"
+                                                       data-subject="Evidence Act, 1872"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 30 :
+                                                    <b>30</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 29"
-                                                           data-subject="Evidence Act, 1872"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 29 :
-                                                        <b>365</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 3"
+                                                       data-subject="Evidence Act, 1872"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 3 :
+                                                    <b>22</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 30"
-                                                           data-subject="Evidence Act, 1872"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 30 :
-                                                        <b>30</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 91"
+                                                       data-subject="Evidence Act, 1872"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 91 :
+                                                    <b>20</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 3"
-                                                           data-subject="Evidence Act, 1872"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 3 :
-                                                        <b>22</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 92"
+                                                       data-subject="Evidence Act, 1872"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 92 :
+                                                    <b>20</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 91"
-                                                           data-subject="Evidence Act, 1872"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 91 :
-                                                        <b>20</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 106"
+                                                       data-subject="Evidence Act, 1872"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 106 :
+                                                    <b>19</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 92"
-                                                           data-subject="Evidence Act, 1872"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 92 :
-                                                        <b>20</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 73"
+                                                       data-subject="Evidence Act, 1872"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 73 :
+                                                    <b>19</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 106"
-                                                           data-subject="Evidence Act, 1872"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 106 :
-                                                        <b>19</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 114"
+                                                       data-subject="Evidence Act, 1872"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 114 :
+                                                    <b>18</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 73"
-                                                           data-subject="Evidence Act, 1872"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 73 :
-                                                        <b>19</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 145"
+                                                       data-subject="Evidence Act, 1872"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 145 :
+                                                    <b>18</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 114"
-                                                           data-subject="Evidence Act, 1872"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 114 :
-                                                        <b>18</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 80"
+                                                       data-subject="Evidence Act, 1872"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 80 :
+                                                    <b>18</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 145"
-                                                           data-subject="Evidence Act, 1872"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 145 :
-                                                        <b>18</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Section 80"
-                                                           data-subject="Evidence Act, 1872"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 80 :
-                                                        <b>18</b></small>
-                                                    <br>
-
-                                                </div>
+                                            </div>
 
 
-                                                <a type="button" class="collapsible">
+                                            <a type="button" class="collapsible">
                                     <span style="float: left; margin-left: 13px;">
 
                                             </span></a><a style="font-size: 14px; cursor: pointer;"
                                                           data-toggle="collapse" data-target="#subSubject10"
                                                           role="button">
-                                                <i class="fa fa-plus-square" aria-hidden="true"></i>
-                                            </a>
+                                            <i class="fa fa-plus-square" aria-hidden="true"></i>
+                                        </a>
 
 
-                                                <input type="checkbox" value="Specific Relief Act, 1877"
-                                                       class="form-check-label" onclick="addSubjectFilter(this)">
-                                                <small>Specific Relief Act, 1877</small>
+                                            <input type="checkbox" value="Specific Relief Act, 1877"
+                                                   class="form-check-label" onclick="addSubjectFilter(this)">
+                                            <small>Specific Relief Act, 1877</small>
 
 
-                                                <span style="float: right;">
+                                            <span style="float: right;">
                                          225
                                     </span>
 
+                                            <br>
+
+                                            <div class="collapse multi-collapse" style="padding-left: 40px;"
+                                                 id="subSubject10">
+
+                                                <input type="checkbox" class="form-check-label" value="Section 42"
+                                                       data-subject="Specific Relief Act, 1877"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 42 :
+                                                    <b>105</b></small>
                                                 <br>
 
-                                                <div class="collapse multi-collapse" style="padding-left: 40px;"
-                                                     id="subSubject10">
+                                                <input type="checkbox" class="form-check-label" value="Section 56"
+                                                       data-subject="Specific Relief Act, 1877"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 56 :
+                                                    <b>15</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 42"
-                                                           data-subject="Specific Relief Act, 1877"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 42 :
-                                                        <b>105</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 39"
+                                                       data-subject="Specific Relief Act, 1877"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 39 :
+                                                    <b>14</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 56"
-                                                           data-subject="Specific Relief Act, 1877"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 56 :
-                                                        <b>15</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="&shy; Section 42"
+                                                       data-subject="Specific Relief Act, 1877"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">&shy; Section 42 :
+                                                    <b>13</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 39"
-                                                           data-subject="Specific Relief Act, 1877"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 39 :
-                                                        <b>14</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 22"
+                                                       data-subject="Specific Relief Act, 1877"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 22 :
+                                                    <b>11</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="&shy; Section 42"
-                                                           data-subject="Specific Relief Act, 1877"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">&shy; Section 42 :
-                                                        <b>13</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 53"
+                                                       data-subject="Specific Relief Act, 1877"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 53 :
+                                                    <b>11</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 22"
-                                                           data-subject="Specific Relief Act, 1877"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 22 :
-                                                        <b>11</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 54"
+                                                       data-subject="Specific Relief Act, 1877"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 54 :
+                                                    <b>11</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 53"
-                                                           data-subject="Specific Relief Act, 1877"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 53 :
-                                                        <b>11</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label" value="Section 9"
+                                                       data-subject="Specific Relief Act, 1877"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 9 :
+                                                    <b>11</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 54"
-                                                           data-subject="Specific Relief Act, 1877"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 54 :
-                                                        <b>11</b></small>
-                                                    <br>
+                                                <input type="checkbox" class="form-check-label"
+                                                       value="&shy;Section 42"
+                                                       data-subject="Specific Relief Act, 1877"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">&shy;Section 42 :
+                                                    <b>10</b></small>
+                                                <br>
 
-                                                    <input type="checkbox" class="form-check-label" value="Section 9"
-                                                           data-subject="Specific Relief Act, 1877"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 9 :
-                                                        <b>11</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label"
-                                                           value="&shy;Section 42"
-                                                           data-subject="Specific Relief Act, 1877"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">&shy;Section 42 :
-                                                        <b>10</b></small>
-                                                    <br>
-
-                                                    <input type="checkbox" class="form-check-label" value="Section 21"
-                                                           data-subject="Specific Relief Act, 1877"
-                                                           onclick="addSubSubjectFilter(this)">
-                                                    <small style="font-size: 11px;">Section 21 :
-                                                        <b>9</b></small>
-                                                    <br>
-
-                                                </div>
-
+                                                <input type="checkbox" class="form-check-label" value="Section 21"
+                                                       data-subject="Specific Relief Act, 1877"
+                                                       onclick="addSubSubjectFilter(this)">
+                                                <small style="font-size: 11px;">Section 21 :
+                                                    <b>9</b></small>
+                                                <br>
 
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="card" style="margin-top: 30px;">
-                                        <div class="card-header" style="background-color:#152c5d;">
-                                            <p class="mb-0 text-white">Subject</p>
-                                        </div>
-                                        <div class="card-body">
-                                            <hr class="mt-0">
-                                            <div id="subjectList">
 
-
-                                                <input type="checkbox" value="Criminal Law" class="form-check-label"
-                                                       onclick="addMainSubjectFilter(this)">
-                                                <small>Criminal Law</small>
-
-                                                <span style="float: right;">
-                                        8496
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox" value="Criminal" class="form-check-label"
-                                                       onclick="addMainSubjectFilter(this)">
-                                                <small>Criminal</small>
-
-                                                <span style="float: right;">
-                                        7549
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox" value="Civil" class="form-check-label"
-                                                       onclick="addMainSubjectFilter(this)">
-                                                <small>Civil</small>
-
-                                                <span style="float: right;">
-                                        6994
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox" value="Property" class="form-check-label"
-                                                       onclick="addMainSubjectFilter(this)">
-                                                <small>Property</small>
-
-                                                <span style="float: right;">
-                                        5760
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox" value="Law of Civil Procedure"
-                                                       class="form-check-label" onclick="addMainSubjectFilter(this)">
-                                                <small>Law of Civil Procedure</small>
-
-                                                <span style="float: right;">
-                                        3205
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox" value="Tenancy" class="form-check-label"
-                                                       onclick="addMainSubjectFilter(this)">
-                                                <small>Tenancy</small>
-
-                                                <span style="float: right;">
-                                        2121
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox" value="Land Law" class="form-check-label"
-                                                       onclick="addMainSubjectFilter(this)">
-                                                <small>Land Law</small>
-
-                                                <span style="float: right;">
-                                        2030
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox" value="Limitation" class="form-check-label"
-                                                       onclick="addMainSubjectFilter(this)">
-                                                <small>Limitation</small>
-
-                                                <span style="float: right;">
-                                        1491
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox" value="Employment Law" class="form-check-label"
-                                                       onclick="addMainSubjectFilter(this)">
-                                                <small>Employment Law</small>
-
-                                                <span style="float: right;">
-                                        1428
-                                    </span>
-                                                <br>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card" style="margin-top: 30px;">
-                                        <div class="card-header" style="background-color:#152c5d;">
-                                            <p class="mb-0 text-white">Court</p>
-                                        </div>
-                                        <div class="card-body">
-                                            <hr class="mt-0">
-                                            <div id="courtList">
-
-
-                                                <input type="checkbox" value="Supreme Court of India"
-                                                       class="form-check-label" onclick="addCourtFilter(this)">
-                                                <small>Supreme Court of India</small>
-
-                                                <span style="float: right;">
-                                        15701
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox" value="High Court of Calcutta, India"
-                                                       class="form-check-label" onclick="addCourtFilter(this)">
-                                                <small>High Court of Calcutta, India</small>
-
-                                                <span style="float: right;">
-                                        10850
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox"
-                                                       value="High Court Division, Supreme Court of Bangladesh"
-                                                       class="form-check-label" onclick="addCourtFilter(this)">
-                                                <small>High Court Division, Supreme Court of Bangla…</small>
-
-                                                <span style="float: right;">
-                                        8723
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox" value="High Court of Allahabad, India"
-                                                       class="form-check-label" onclick="addCourtFilter(this)">
-                                                <small>High Court of Allahabad, India</small>
-
-                                                <span style="float: right;">
-                                        6850
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox"
-                                                       value="Appellate Division, Supreme Court of Bangladesh"
-                                                       class="form-check-label" onclick="addCourtFilter(this)">
-                                                <small>Appellate Division, Supreme Court of Banglad…</small>
-
-                                                <span style="float: right;">
-                                        5026
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox" value="High Court of Bombay, India"
-                                                       class="form-check-label" onclick="addCourtFilter(this)">
-                                                <small>High Court of Bombay, India</small>
-
-                                                <span style="float: right;">
-                                        4090
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox" value="High Court of Lahore, Pakistan"
-                                                       class="form-check-label" onclick="addCourtFilter(this)">
-                                                <small>High Court of Lahore, Pakistan</small>
-
-                                                <span style="float: right;">
-                                        3339
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox" value="High Court of West Pakistan"
-                                                       class="form-check-label" onclick="addCourtFilter(this)">
-                                                <small>High Court of West Pakistan</small>
-
-                                                <span style="float: right;">
-                                        2074
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox" value="High Court of East Pakistan"
-                                                       class="form-check-label" onclick="addCourtFilter(this)">
-                                                <small>High Court of East Pakistan</small>
-
-                                                <span style="float: right;">
-                                        1652
-                                    </span>
-                                                <br>
-
-
-                                                <input type="checkbox" value="High Court of Allahabad"
-                                                       class="form-check-label" onclick="addCourtFilter(this)">
-                                                <small>High Court of Allahabad</small>
-
-                                                <span style="float: right;">
-                                        822
-                                    </span>
-                                                <br>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card" style="margin-top: 30px;">
-                                        <div class="card-header" style="background-color:#152c5d;">
-                                            <p class="mb-0 text-white">Date</p>
-                                        </div>
-                                        <div class="card-body">
-                                            <hr class="mt-0 mb-3">
-                                            <input type="radio" value="0" name="filterByDate" class="form-check-label"
-                                                   onclick="addDateFilter(this)" checked="">
-                                            <small>All</small>
-
-                                            <span id="docAll" style="float: right;">
-                            64794
-                        </span>
-                                            <br>
-
-                                            <input type="radio" value="183" name="filterByDate" class="form-check-label"
-                                                   onclick="addDateFilter(this)">
-                                            <small>Last 6 months</small>
-
-                                            <span id="doc2" style="float: right;">
-                            6
-                        </span>
-                                            <br>
-
-
-                                            <input type="radio" value="365" name="filterByDate" class="form-check-label"
-                                                   onclick="addDateFilter(this)">
-                                            <small>Last 12 months</small>
-
-                                            <span id="doc1" style="float: right;">
-                            457
-                        </span>
-                                            <br>
-
-
-                                            <input type="radio" value="1096" name="filterByDate"
-                                                   class="form-check-label" onclick="addDateFilter(this)">
-                                            <small>Last 3 years</small>
-
-                                            <span id="doc0" style="float: right;">
-                            4138
-                        </span>
-                                            <br>
-                                            <hr class="mt-1 mb-2">
-
-
-                                            <input type="radio" value="before" name="filterByDate"
-                                                   class="form-check-label" onclick="showDateField('#before')">
-                                            <small>All cases before</small>
-
-
-                                            <span style="float: right;">
-
-                        </span>
-                                            <br>
-
-                                            <div id="before" style="display:none;">
-                                                <br>
-                                                <input id="date-before" type="date" class="form-control" required="">
-                                                <br>
-                                                <button class="form-control mb-4"
-                                                        style="background: #2196F3; color: white" type="button"
-                                                        onclick="customDate('#before')">OK
-                                                </button>
-                                            </div>
-
-
-                                            <input type="radio" value="after" name="filterByDate"
-                                                   class="form-check-label" onclick="showDateField('#after')">
-
-                                            <small>All cases after</small>
-
-                                            <span style="float: right;">
-                        </span>
-                                            <br>
-
-                                            <div id="after" style="display:none;">
-                                                <br>
-                                                <input type="date" id="date-after" class="form-control" required="">
-                                                <br>
-                                                <button class="form-control mb-4"
-                                                        style="background: #2196F3; color: white;" type="button"
-                                                        onclick="customDate('#after')">OK
-                                                </button>
-                                            </div>
-
-                                            <input type="radio" value="specific" name="filterByDate"
-                                                   class="form-check-label" onclick="showDateField('#specific')">
-
-                                            <small>Specific date</small>
-
-                                            <span style="float: right;">
-                        </span>
-                                            <br>
-
-                                            <div id="specific" style="display:none;">
-                                                <br>
-                                                <input type="date" id="date-specific" class="form-control" required="">
-                                                <br>
-                                                <button class="form-control mb-4"
-                                                        style="background: #2196F3; color: white;" type="button"
-                                                        onclick="customDate('#specific')">OK
-                                                </button>
-                                            </div>
-
-                                            <input type="radio" value="custom-date" name="filterByDate"
-                                                   class="form-check-label" onclick="showDateField('#custom-date')">
-                                            <small>Date Range</small>
-
-
-                                            <span style="float: right;">
-
-                        </span>
-                                            <br>
-
-                                            <div id="custom-date" style="display:none;">
-                                                <br>
-                                                <p>From Date</p>
-                                                <input type="date" id="custom-date1" class="form-control" required="">
-                                                <br><br>
-                                                <p>To Date</p>
-                                                <input type="date" id="custom-date2" class="form-control" required="">
-                                                <br>
-                                                <button class="form-control mb-4"
-                                                        style="background: #2196F3; color: white;" type="button"
-                                                        onclick="customDate('#custom-date')">OK
-                                                </button>
-                                            </div>
 
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="overflow-auto col-lg-12 p-3 bg-light" style=" max-height: 550px;position:absolute;">
+                                <div class="card" style="margin-top: 30px;">
+                                    <div class="card-header" style="background-color:#152c5d;">
+                                        <p class="mb-0 text-white">Subject</p>
+                                    </div>
                                     <div class="card-body">
+                                        <hr class="mt-0">
+                                        <div id="subjectList">
+
+
+                                            <input type="checkbox" value="Criminal Law" class="form-check-label"
+                                                   onclick="addMainSubjectFilter(this)">
+                                            <small>Criminal Law</small>
+
+                                            <span style="float: right;">
+                                        8496
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox" value="Criminal" class="form-check-label"
+                                                   onclick="addMainSubjectFilter(this)">
+                                            <small>Criminal</small>
+
+                                            <span style="float: right;">
+                                        7549
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox" value="Civil" class="form-check-label"
+                                                   onclick="addMainSubjectFilter(this)">
+                                            <small>Civil</small>
+
+                                            <span style="float: right;">
+                                        6994
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox" value="Property" class="form-check-label"
+                                                   onclick="addMainSubjectFilter(this)">
+                                            <small>Property</small>
+
+                                            <span style="float: right;">
+                                        5760
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox" value="Law of Civil Procedure"
+                                                   class="form-check-label" onclick="addMainSubjectFilter(this)">
+                                            <small>Law of Civil Procedure</small>
+
+                                            <span style="float: right;">
+                                        3205
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox" value="Tenancy" class="form-check-label"
+                                                   onclick="addMainSubjectFilter(this)">
+                                            <small>Tenancy</small>
+
+                                            <span style="float: right;">
+                                        2121
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox" value="Land Law" class="form-check-label"
+                                                   onclick="addMainSubjectFilter(this)">
+                                            <small>Land Law</small>
+
+                                            <span style="float: right;">
+                                        2030
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox" value="Limitation" class="form-check-label"
+                                                   onclick="addMainSubjectFilter(this)">
+                                            <small>Limitation</small>
+
+                                            <span style="float: right;">
+                                        1491
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox" value="Employment Law" class="form-check-label"
+                                                   onclick="addMainSubjectFilter(this)">
+                                            <small>Employment Law</small>
+
+                                            <span style="float: right;">
+                                        1428
+                                    </span>
+                                            <br>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="margin-top: 30px;">
+                                    <div class="card-header" style="background-color:#152c5d;">
+                                        <p class="mb-0 text-white">Court</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <hr class="mt-0">
+                                        <div id="courtList">
+
+
+                                            <input type="checkbox" value="Supreme Court of India"
+                                                   class="form-check-label" onclick="addCourtFilter(this)">
+                                            <small>Supreme Court of India</small>
+
+                                            <span style="float: right;">
+                                        15701
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox" value="High Court of Calcutta, India"
+                                                   class="form-check-label" onclick="addCourtFilter(this)">
+                                            <small>High Court of Calcutta, India</small>
+
+                                            <span style="float: right;">
+                                        10850
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox"
+                                                   value="High Court Division, Supreme Court of Bangladesh"
+                                                   class="form-check-label" onclick="addCourtFilter(this)">
+                                            <small>High Court Division, Supreme Court of Bangla…</small>
+
+                                            <span style="float: right;">
+                                        8723
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox" value="High Court of Allahabad, India"
+                                                   class="form-check-label" onclick="addCourtFilter(this)">
+                                            <small>High Court of Allahabad, India</small>
+
+                                            <span style="float: right;">
+                                        6850
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox"
+                                                   value="Appellate Division, Supreme Court of Bangladesh"
+                                                   class="form-check-label" onclick="addCourtFilter(this)">
+                                            <small>Appellate Division, Supreme Court of Banglad…</small>
+
+                                            <span style="float: right;">
+                                        5026
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox" value="High Court of Bombay, India"
+                                                   class="form-check-label" onclick="addCourtFilter(this)">
+                                            <small>High Court of Bombay, India</small>
+
+                                            <span style="float: right;">
+                                        4090
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox" value="High Court of Lahore, Pakistan"
+                                                   class="form-check-label" onclick="addCourtFilter(this)">
+                                            <small>High Court of Lahore, Pakistan</small>
+
+                                            <span style="float: right;">
+                                        3339
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox" value="High Court of West Pakistan"
+                                                   class="form-check-label" onclick="addCourtFilter(this)">
+                                            <small>High Court of West Pakistan</small>
+
+                                            <span style="float: right;">
+                                        2074
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox" value="High Court of East Pakistan"
+                                                   class="form-check-label" onclick="addCourtFilter(this)">
+                                            <small>High Court of East Pakistan</small>
+
+                                            <span style="float: right;">
+                                        1652
+                                    </span>
+                                            <br>
+
+
+                                            <input type="checkbox" value="High Court of Allahabad"
+                                                   class="form-check-label" onclick="addCourtFilter(this)">
+                                            <small>High Court of Allahabad</small>
+
+                                            <span style="float: right;">
+                                        822
+                                    </span>
+                                            <br>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="margin-top: 30px;">
+                                    <div class="card-header" style="background-color:#152c5d;">
+                                        <p class="mb-0 text-white">Date</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <hr class="mt-0">
+                                        <input type="radio" value="0" name="filterByDate" class="form-check-label"
+                                               onclick="addDateFilter(this)" checked="">
+                                        <small>All</small>
+
+                                        <span id="docAll" style="float: right;">
+                            64794
+                        </span>
+                                        <br>
+
+                                        <input type="radio" value="183" name="filterByDate" class="form-check-label"
+                                               onclick="addDateFilter(this)">
+                                        <small>Last 6 months</small>
+
+                                        <span id="doc2" style="float: right;">
+                            6
+                        </span>
+                                        <br>
+
+
+                                        <input type="radio" value="365" name="filterByDate" class="form-check-label"
+                                               onclick="addDateFilter(this)">
+                                        <small>Last 12 months</small>
+
+                                        <span id="doc1" style="float: right;">
+                            457
+                        </span>
+                                        <br>
+
+
+                                        <input type="radio" value="1096" name="filterByDate"
+                                               class="form-check-label" onclick="addDateFilter(this)">
+                                        <small>Last 3 years</small>
+
+                                        <span id="doc0" style="float: right;">
+                            4138
+                        </span>
+                                        <br>
+                                        <hr class="mt-1 mb-2">
+
+
+                                        <input type="radio" value="before" name="filterByDate"
+                                               class="form-check-label" onclick="showDateField('#before')">
+                                        <small>All cases before</small>
+
+
+                                        <span style="float: right;">
+
+                        </span>
+                                        <br>
+
+                                        <div id="before" style="display:none;">
+                                            <br>
+                                            <input id="date-before" type="date" class="form-control" required="">
+                                            <br>
+                                            <button class="form-control mb-4"
+                                                    style="background: #2196F3; color: white" type="button"
+                                                    onclick="customDate('#before')">OK
+                                            </button>
+                                        </div>
+
+
+                                        <input type="radio" value="after" name="filterByDate"
+                                               class="form-check-label" onclick="showDateField('#after')">
+
+                                        <small>All cases after</small>
+
+                                        <span style="float: right;">
+                        </span>
+                                        <br>
+
+                                        <div id="after" style="display:none;">
+                                            <br>
+                                            <input type="date" id="date-after" class="form-control" required="">
+                                            <br>
+                                            <button class="form-control mb-4"
+                                                    style="background: #2196F3; color: white;" type="button"
+                                                    onclick="customDate('#after')">OK
+                                            </button>
+                                        </div>
+
+                                        <input type="radio" value="specific" name="filterByDate"
+                                               class="form-check-label" onclick="showDateField('#specific')">
+
+                                        <small>Specific date</small>
+
+                                        <span style="float: right;">
+                        </span>
+                                        <br>
+
+                                        <div id="specific" style="display:none;">
+                                            <br>
+                                            <input type="date" id="date-specific" class="form-control" required="">
+                                            <br>
+                                            <button class="form-control mb-4"
+                                                    style="background: #2196F3; color: white;" type="button"
+                                                    onclick="customDate('#specific')">OK
+                                            </button>
+                                        </div>
+
+                                        <input type="radio" value="custom-date" name="filterByDate"
+                                               class="form-check-label" onclick="showDateField('#custom-date')">
+                                        <small>Date Range</small>
+
+
+                                        <span style="float: right;">
+
+                        </span>
+                                        <br>
+
+                                        <div id="custom-date" style="display:none;">
+                                            <br>
+                                            <p>From Date</p>
+                                            <input type="date" id="custom-date1" class="form-control" required="">
+                                            <br><br>
+                                            <p>To Date</p>
+                                            <input type="date" id="custom-date2" class="form-control" required="">
+                                            <br>
+                                            <button class="form-control mb-4"
+                                                    style="background: #2196F3; color: white;" type="button"
+                                                    onclick="customDate('#custom-date')">OK
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="overflow-auto col-lg-12 bg-light"
+                                 style="position:stiky;">
+                                <div class="card-body">
                                     <div id="casetable" class="table-responsive">
                                         <div class="container" style="margin-bottom:10px;">
                                             <button class="float-right btn btn-info ml-2" type="button" id="copyButton"
@@ -1728,32 +1726,34 @@
 
                                     </div>
                                 </div>
-                                </div>
                             </div>
                         </div>
+                    </div>
                 </div>
-        </div>
-</div>
+            </div>
     </section>
+</div>
 
 
-
-<script src="plugins/jquery/jquery.min.js"></script>
-<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<script>$.widget.bridge('uibutton', $.ui.button)</script>
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="plugins/chart.js/Chart.min.js"></script>
-<script src="plugins/sparklines/sparkline.js"></script>
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
-<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<script src="plugins/summernote/summernote-bs4.min.js"></script>
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<script src="dist/js/adminlte.js"></script>
-<script src="dist/js/pages/dashboard.js"></script>
-<script src="dist/js/demo.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script>$.widget.bridge('uibutton', $.ui.button)</script>
+    <script>
+        document.getElementById("left_height").style.maxHeight=screen.height+"px";
+    </script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="plugins/chart.js/Chart.min.js"></script>
+    <script src="plugins/sparklines/sparkline.js"></script>
+    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+    <script src="plugins/moment/moment.min.js"></script>
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="plugins/summernote/summernote-bs4.min.js"></script>
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="dist/js/adminlte.js"></script>
+    <script src="dist/js/pages/dashboard.js"></script>
+    <script src="dist/js/demo.js"></script>
 </body>
 </html>
